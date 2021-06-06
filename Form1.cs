@@ -18,6 +18,7 @@ namespace Intefraz_de_Usuario
         //fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form FormActual;
         //Constructor
 
         public Form1()
@@ -31,6 +32,7 @@ namespace Intefraz_de_Usuario
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         //Estructura de colores RGB
@@ -84,6 +86,21 @@ namespace Intefraz_de_Usuario
 
             }
         }
+
+        //Abrir Forms
+        private void OpenForm(Form FormHijo)
+        {
+            if (FormActual != null)
+            {
+                //Mantener un solo form
+                FormActual.Close();
+            }
+            FormActual = FormHijo;
+            FormHijo.TopLevel = false;
+            FormHijo.FormBorderStyle = FormBorderStyle.None;
+
+        }
+        //Fin de abrir Forms
 
         private void iconButton1_Click(object sender, EventArgs e)
         {

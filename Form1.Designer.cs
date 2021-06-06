@@ -42,6 +42,8 @@ namespace Intefraz_de_Usuario
             this.PanelBarra = new System.Windows.Forms.Panel();
             this.Labelinicio = new System.Windows.Forms.Label();
             this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
+            this.PanelShadow = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnInicio)).BeginInit();
@@ -76,7 +78,7 @@ namespace Intefraz_de_Usuario
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.IconSize = 32;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 450);
+            this.iconButton6.Location = new System.Drawing.Point(0, 444);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButton6.Size = new System.Drawing.Size(220, 60);
@@ -98,7 +100,7 @@ namespace Intefraz_de_Usuario
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 32;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 390);
+            this.iconButton5.Location = new System.Drawing.Point(0, 384);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButton5.Size = new System.Drawing.Size(220, 60);
@@ -120,7 +122,7 @@ namespace Intefraz_de_Usuario
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 32;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 330);
+            this.iconButton4.Location = new System.Drawing.Point(0, 324);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButton4.Size = new System.Drawing.Size(220, 60);
@@ -142,7 +144,7 @@ namespace Intefraz_de_Usuario
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 32;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 270);
+            this.iconButton3.Location = new System.Drawing.Point(0, 264);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButton3.Size = new System.Drawing.Size(220, 60);
@@ -164,7 +166,7 @@ namespace Intefraz_de_Usuario
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 32;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 210);
+            this.iconButton2.Location = new System.Drawing.Point(0, 204);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButton2.Size = new System.Drawing.Size(220, 60);
@@ -186,7 +188,7 @@ namespace Intefraz_de_Usuario
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 32;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 150);
+            this.iconButton1.Location = new System.Drawing.Point(0, 144);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButton1.Size = new System.Drawing.Size(220, 60);
@@ -203,13 +205,13 @@ namespace Intefraz_de_Usuario
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 150);
+            this.panelLogo.Size = new System.Drawing.Size(220, 144);
             this.panelLogo.TabIndex = 1;
             // 
             // BtnInicio
             // 
             this.BtnInicio.Image = ((System.Drawing.Image)(resources.GetObject("BtnInicio.Image")));
-            this.BtnInicio.Location = new System.Drawing.Point(0, 12);
+            this.BtnInicio.Location = new System.Drawing.Point(0, 6);
             this.BtnInicio.Name = "BtnInicio";
             this.BtnInicio.Size = new System.Drawing.Size(217, 132);
             this.BtnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,17 +227,18 @@ namespace Intefraz_de_Usuario
             this.PanelBarra.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelBarra.Location = new System.Drawing.Point(220, 0);
             this.PanelBarra.Name = "PanelBarra";
-            this.PanelBarra.Size = new System.Drawing.Size(812, 80);
+            this.PanelBarra.Size = new System.Drawing.Size(812, 70);
             this.PanelBarra.TabIndex = 1;
             this.PanelBarra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarra_MouseDown);
             // 
             // Labelinicio
             // 
             this.Labelinicio.AutoSize = true;
+            this.Labelinicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Labelinicio.ForeColor = System.Drawing.Color.LightGray;
             this.Labelinicio.Location = new System.Drawing.Point(49, 28);
             this.Labelinicio.Name = "Labelinicio";
-            this.Labelinicio.Size = new System.Drawing.Size(40, 17);
+            this.Labelinicio.Size = new System.Drawing.Size(48, 20);
             this.Labelinicio.TabIndex = 1;
             this.Labelinicio.Text = "Inicio";
             // 
@@ -252,11 +255,29 @@ namespace Intefraz_de_Usuario
             this.iconCurrent.TabIndex = 0;
             this.iconCurrent.TabStop = false;
             // 
+            // PanelShadow
+            // 
+            this.PanelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.PanelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelShadow.Location = new System.Drawing.Point(220, 70);
+            this.PanelShadow.Name = "PanelShadow";
+            this.PanelShadow.Size = new System.Drawing.Size(812, 9);
+            this.PanelShadow.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(526, 213);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 587);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelShadow);
             this.Controls.Add(this.PanelBarra);
             this.Controls.Add(this.PanelMenu);
             this.Name = "Form1";
@@ -285,6 +306,8 @@ namespace Intefraz_de_Usuario
         private System.Windows.Forms.Panel PanelBarra;
         private FontAwesome.Sharp.IconPictureBox iconCurrent;
         private System.Windows.Forms.Label Labelinicio;
+        private System.Windows.Forms.Panel PanelShadow;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
