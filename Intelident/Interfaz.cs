@@ -83,10 +83,29 @@ namespace Intelident
             }
         }
 
+        //Abrir Forms
+        private void OpenForm(Form FormHijo)
+        {
+            if (FormActual != null)
+            {
+                //Mantener un solo form
+                FormActual.Close();
+            }
+            FormActual = FormHijo;
+            FormHijo.TopLevel = false;
+            FormHijo.FormBorderStyle = FormBorderStyle.None;
+            FormHijo.Dock = DockStyle.Fill;
+            PanelVisual.Controls.Add(FormHijo);
+            PanelVisual.Tag = FormHijo;
+            FormHijo.BringToFront();
+            FormHijo.Show();
+            Labelinicio.Text = FormHijo.Text;
+
+        }
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-            FormActual.Close();
+           // FormActual.Close();
             Reset();
         }
 
@@ -134,7 +153,9 @@ namespace Intelident
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            Form1 main = new Form1();
+            main.Show();
         }
 
         private void iconPictureBox2_Click(object sender, EventArgs e)

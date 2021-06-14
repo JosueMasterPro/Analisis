@@ -18,6 +18,12 @@ namespace Intelident
         public Form1()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.textBox2.UseSystemPasswordChar = true;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -66,7 +72,13 @@ namespace Intelident
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Application.Exit();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
     
