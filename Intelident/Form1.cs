@@ -32,9 +32,13 @@ namespace Intelident
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+
+        public string userName { get ; set; }
+
+
         public static SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            SqlConnection cn = new SqlConnection("data source = 25.0.242.85; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
 
             cn.Open();
             return cn;
@@ -48,6 +52,9 @@ namespace Intelident
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        
+
+
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Conectar();
@@ -60,7 +67,8 @@ namespace Intelident
             {
                 MessageBox.Show("Acceso Concedido");
                 this.Hide();
-                new Interfaz().Show();
+                userName = textBox1.Text;
+                new Interfaz(userName).Show();
                 
 
             }

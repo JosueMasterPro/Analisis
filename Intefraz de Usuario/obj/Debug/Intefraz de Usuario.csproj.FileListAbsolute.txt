@@ -1,0 +1,4 @@
+C:\Users\frank\source\repos\Analisis\Intefraz de Usuario\obj\Debug\Intefraz de Usuario.csprojAssemblyReference.cache
+C:\Users\frank\source\repos\Analisis\Intefraz de Usuario\obj\Debug\Intefraz_de_Usuario.BasedeDatos.resources
+C:\Users\frank\source\repos\Analisis\Intefraz de Usuario\obj\Debug\Intefraz_de_Usuario.Form1.resources
+C:\Users\frank\source\repos\Analisis\Intefraz de Usuario\obj\Debug\Intefraz de Usuario.csproj.GenerateResource.cache

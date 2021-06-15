@@ -47,6 +47,7 @@ namespace Intelident
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.BtnInicio = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelVisual.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelBarra.SuspendLayout();
@@ -83,6 +84,7 @@ namespace Intelident
             // PanelBarra
             // 
             this.PanelBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.PanelBarra.Controls.Add(this.label1);
             this.PanelBarra.Controls.Add(this.iconPictureBox3);
             this.PanelBarra.Controls.Add(this.iconPictureBox2);
             this.PanelBarra.Controls.Add(this.iconPictureBox1);
@@ -332,6 +334,16 @@ namespace Intelident
             this.BtnInicio.TabStop = false;
             this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.label1.Location = new System.Drawing.Point(541, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
+            // 
             // Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,5 +388,6 @@ namespace Intelident
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label label1;
     }
 }

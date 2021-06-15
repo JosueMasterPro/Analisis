@@ -21,7 +21,7 @@ namespace Intelident
         private Panel leftBorderBtn;
         private Form FormActual;
         //Constructor
-        public Interfaz()
+        public Interfaz(string userName)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -32,6 +32,7 @@ namespace Intelident
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.label1.Text = userName;
         }
         private struct RGBColors
         {
