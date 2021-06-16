@@ -170,6 +170,7 @@ namespace Intelident
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActivarBoton(sender, RGBColors.color3);
+            OpenForm(new RAverias());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
