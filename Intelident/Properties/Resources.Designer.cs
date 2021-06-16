@@ -63,9 +63,9 @@ namespace Intelident.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap goku_super_saiyan_blue_dragon_ball_super_3954x2160_xtrafondos_com {
+        internal static System.Drawing.Bitmap Goku {
             get {
-                object obj = ResourceManager.GetObject("goku-super-saiyan-blue-dragon-ball-super_3954x2160_xtrafondos.com", resourceCulture);
+                object obj = ResourceManager.GetObject("Goku", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +76,16 @@ namespace Intelident.Properties {
         internal static System.Drawing.Bitmap Intelident {
             get {
                 object obj = ResourceManager.GetObject("Intelident", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vegeta {
+            get {
+                object obj = ResourceManager.GetObject("Vegeta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

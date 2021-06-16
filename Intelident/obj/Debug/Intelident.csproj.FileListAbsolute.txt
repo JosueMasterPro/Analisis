@@ -11,3 +11,17 @@ C:\Users\frank\source\repos\Analisis\Intelident\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\frank\source\repos\Analisis\Intelident\obj\Debug\Intelident.csproj.CopyComplete
 C:\Users\frank\source\repos\Analisis\Intelident\obj\Debug\Intelident.exe
 C:\Users\frank\source\repos\Analisis\Intelident\obj\Debug\Intelident.pdb
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.exe.config
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.exe
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.pdb
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.AssemblyReference.cache
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Form1.resources
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Ingreso.resources
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Interfaz.resources
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Properties.Resources.resources
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.GenerateResource.cache
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.CoreCompileInputs.cache
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.CopyComplete
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.exe
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.pdb

@@ -118,10 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Goku" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Goku.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Intelident" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Intelident.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="goku-super-saiyan-blue-dragon-ball-super_3954x2160_xtrafondos.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\goku-super-saiyan-blue-dragon-ball-super_3954x2160_xtrafondos.com.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Vegeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vegeta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
