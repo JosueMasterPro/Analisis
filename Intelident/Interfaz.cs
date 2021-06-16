@@ -32,7 +32,7 @@ namespace Intelident
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            this.label1.Text = userName;
+            this.labelUser.Text = userName;
         }
         private struct RGBColors
         {
@@ -181,6 +181,21 @@ namespace Intelident
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
