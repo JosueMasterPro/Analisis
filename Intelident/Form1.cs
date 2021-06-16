@@ -9,12 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
-
+using FontAwesome.Sharp;
 
 namespace Intelident
 {
     public partial class Form1 : Form
     {
+
+
+
+        private IconButton currentBtn;
+        private Panel leftBorderBtn;
+        private Form FormActual;
         public Form1()
         {
             InitializeComponent();
@@ -34,17 +40,28 @@ namespace Intelident
 
 
         public string userName { get ; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Celular { get; set; }
+        public string Correo { get; set; }
+      
+
 
 
         public static SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection("data source = 25.0.242.85; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
 
             cn.Open();
             return cn;
 
         }
-
+        public static SqlConnection Cerrrar()
+        {
+            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            cn.Close();
+            return cn;
+        }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -52,10 +69,25 @@ namespace Intelident
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+        private void OpenForm(Form FormHijo)
+        {
+            if (FormActual != null)
+            {
+                //Mantener un solo form
+                FormActual.Close();
+            }
+            FormActual = FormHijo;
+            FormHijo.TopLevel = false;
+            FormHijo.FormBorderStyle = FormBorderStyle.None;
+            FormHijo.Dock = DockStyle.Fill;
+            PanelMain.Controls.Add(FormHijo);
+            PanelMain.Tag = FormHijo;
+            FormHijo.BringToFront();
+            FormHijo.Show();
+        }
 
 
-        private void iconButton1_Click(object sender, EventArgs e)
+            private void iconButton1_Click(object sender, EventArgs e)
         {
             Conectar();
 
@@ -65,16 +97,26 @@ namespace Intelident
 
             if (dt.Rows[0][0].ToString() == "1")
             {
-                MessageBox.Show("Acceso Concedido");
-                this.Hide();
-                userName = textBox1.Text;
-                new Interfaz(userName).Show();
-                
+                SqlCommand Comando = new SqlCommand("Select * from Alogin where Usuario=@Usuario",Conectar());
+                Comando.Parameters.AddWithValue("@Usuario", textBox1.Text);
+                SqlDataReader registro = Comando.ExecuteReader();
 
+                if (registro.Read())
+                {
+                    Nombre = registro["Nombre"].ToString();
+                    Apellido = registro["Apellido"].ToString();
+                    Celular = registro["Celular"].ToString();
+                    Correo = registro["Correo"].ToString();
+                }
+                userName = textBox1.Text;
+                this.Hide();
+                new Interfaz(userName,Nombre,Apellido,Celular,Correo).Show();
             }
             else
             {
-                MessageBox.Show("Acceso Denegado");
+                textBox1.Text = "";
+                textBox2.Text = "";
+                label3.Text = "Usuario o Contraseña Incorrecto";
             }
         }
 
@@ -87,6 +129,16 @@ namespace Intelident
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            label3.Text = "";
+        }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenForm(new Ingreso());
         }
     }
     
