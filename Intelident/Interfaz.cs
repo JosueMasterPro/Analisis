@@ -22,6 +22,7 @@ namespace Intelident
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form FormActual;
+        public string Usuario;
         public string NombreUsuario;
         public string ApellidoUsuario;
         public string CelularUsuario;
@@ -55,13 +56,14 @@ namespace Intelident
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.label1.Text = userName;
+            Usuario = userName;
             NombreUsuario = Nombre;
             ApellidoUsuario = Apellido;
             CelularUsuario = Celular;
             CorreoUsuario = correo;
+            this.label1.Text = Usuario;
             this.label2.Text = NombreUsuario  + " " + ApellidoUsuario ;
-            this.label3.Text = CorreoUsuario;
+            this.label3.Text = CelularUsuario;
             buscar(userName);
 
 
@@ -155,7 +157,7 @@ namespace Intelident
         {
             ActivarBoton(sender, RGBColors.color1);
             //Agregar formulario y enviarloselo al openForm
-            //OpenForm(new BasedeDatos());
+            //OpenForm(new Ingreso());
             //nota importante, al crear el form debemos darle la propiedad que siempre este centrado asi se movera con la app
         }
 
@@ -177,7 +179,14 @@ namespace Intelident
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
-            ActivarBoton(sender, RGBColors.color5);
+            if (Usuario == "JREYES") { 
+                ActivarBoton(sender, RGBColors.color5);
+                OpenForm(new Ingreso());
+            }
+            else
+            {
+                MessageBox.Show("No Tiene Permiso de Acceder aqui");
+            }
         }
 
         private void iconButton6_Click(object sender, EventArgs e)
