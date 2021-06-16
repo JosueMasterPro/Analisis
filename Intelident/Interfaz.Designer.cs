@@ -31,21 +31,21 @@ namespace Intelident
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interfaz));
             this.PanelVisual = new System.Windows.Forms.Panel();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.PanelBarra = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.Labelinicio = new System.Windows.Forms.Label();
+            this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.Logo = new System.Windows.Forms.PictureBox();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
             this.BtnInicio = new System.Windows.Forms.PictureBox();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -53,23 +53,23 @@ namespace Intelident
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.PanelVisual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelBarra.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            this.PanelMenu.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).BeginInit();
+            this.PanelMenu.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnInicio)).BeginInit();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelVisual
@@ -82,6 +82,17 @@ namespace Intelident
             this.PanelVisual.Name = "PanelVisual";
             this.PanelVisual.Size = new System.Drawing.Size(1543, 865);
             this.PanelVisual.TabIndex = 6;
+            // 
+            // Logo
+            // 
+            this.Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(230, 47);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(1062, 563);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 8;
+            this.Logo.TabStop = false;
             // 
             // PanelBarra
             // 
@@ -106,6 +117,23 @@ namespace Intelident
             this.panel2.Size = new System.Drawing.Size(306, 88);
             this.panel2.TabIndex = 9;
             // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox4.IconSize = 57;
+            this.iconPictureBox4.Location = new System.Drawing.Point(192, 12);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(65, 57);
+            this.iconPictureBox4.TabIndex = 10;
+            this.iconPictureBox4.TabStop = false;
+            this.iconPictureBox4.Click += new System.EventHandler(this.iconPictureBox4_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.iconPictureBox3);
@@ -116,6 +144,55 @@ namespace Intelident
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 88);
             this.panel1.TabIndex = 6;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 50;
+            this.iconPictureBox3.Location = new System.Drawing.Point(50, 0);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(50, 88);
+            this.iconPictureBox3.TabIndex = 4;
+            this.iconPictureBox3.TabStop = false;
+            this.iconPictureBox3.Click += new System.EventHandler(this.iconPictureBox3_Click);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 50;
+            this.iconPictureBox2.Location = new System.Drawing.Point(100, 0);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(50, 88);
+            this.iconPictureBox2.TabIndex = 3;
+            this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Visible = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 50;
+            this.iconPictureBox1.Location = new System.Drawing.Point(150, 0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(50, 88);
+            this.iconPictureBox1.TabIndex = 2;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // Labelinicio
             // 
@@ -128,6 +205,21 @@ namespace Intelident
             this.Labelinicio.Size = new System.Drawing.Size(48, 20);
             this.Labelinicio.TabIndex = 1;
             this.Labelinicio.Text = "Inicio";
+            // 
+            // iconCurrent
+            // 
+            this.iconCurrent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconCurrent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconCurrent.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrent.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
+            this.iconCurrent.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrent.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrent.IconSize = 57;
+            this.iconCurrent.Location = new System.Drawing.Point(6, 12);
+            this.iconCurrent.Name = "iconCurrent";
+            this.iconCurrent.Size = new System.Drawing.Size(65, 57);
+            this.iconCurrent.TabIndex = 0;
+            this.iconCurrent.TabStop = false;
             // 
             // label3
             // 
@@ -194,92 +286,6 @@ namespace Intelident
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(381, 201);
             this.panel3.TabIndex = 7;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.label3);
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(381, 268);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // Logo
-            // 
-            this.Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(230, 47);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(1062, 563);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 8;
-            this.Logo.TabStop = false;
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconPictureBox3.ForeColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 50;
-            this.iconPictureBox3.Location = new System.Drawing.Point(50, 0);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(50, 88);
-            this.iconPictureBox3.TabIndex = 4;
-            this.iconPictureBox3.TabStop = false;
-            this.iconPictureBox3.Click += new System.EventHandler(this.iconPictureBox3_Click);
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 50;
-            this.iconPictureBox2.Location = new System.Drawing.Point(100, 0);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(50, 88);
-            this.iconPictureBox2.TabIndex = 3;
-            this.iconPictureBox2.TabStop = false;
-            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 50;
-            this.iconPictureBox1.Location = new System.Drawing.Point(150, 0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(50, 88);
-            this.iconPictureBox1.TabIndex = 2;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
-            // 
-            // iconCurrent
-            // 
-            this.iconCurrent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconCurrent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconCurrent.ForeColor = System.Drawing.Color.MediumPurple;
-            this.iconCurrent.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
-            this.iconCurrent.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconCurrent.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrent.IconSize = 57;
-            this.iconCurrent.Location = new System.Drawing.Point(6, 12);
-            this.iconCurrent.Name = "iconCurrent";
-            this.iconCurrent.Size = new System.Drawing.Size(65, 57);
-            this.iconCurrent.TabIndex = 0;
-            this.iconCurrent.TabStop = false;
             // 
             // BtnInicio
             // 
@@ -438,6 +444,18 @@ namespace Intelident
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.label3);
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(381, 268);
+            this.panelLogo.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -447,23 +465,6 @@ namespace Intelident
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // iconPictureBox4
-            // 
-            this.iconPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.IconSize = 57;
-            this.iconPictureBox4.Location = new System.Drawing.Point(192, 12);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(65, 57);
-            this.iconPictureBox4.TabIndex = 10;
-            this.iconPictureBox4.TabStop = false;
-            this.iconPictureBox4.Click += new System.EventHandler(this.iconPictureBox4_Click);
             // 
             // Interfaz
             // 
@@ -478,22 +479,22 @@ namespace Intelident
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interfaz";
             this.PanelVisual.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.PanelBarra.ResumeLayout(false);
             this.PanelBarra.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.PanelMenu.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).EndInit();
+            this.PanelMenu.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnInicio)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
