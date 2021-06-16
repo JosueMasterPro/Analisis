@@ -18,8 +18,7 @@ namespace Intelident
 
 
 
-        private IconButton currentBtn;
-        private Panel leftBorderBtn;
+       
         private Form FormActual;
         public Form1()
         {

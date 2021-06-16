@@ -54,21 +54,15 @@ namespace Intelident
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.label1.Text = userName;
             NombreUsuario = Nombre;
             ApellidoUsuario = Apellido;
             CelularUsuario = Celular;
             CorreoUsuario = correo;
-            this.label2.Text = NombreUsuario;
-            this.label3.Text = ApellidoUsuario;
+            this.label2.Text = NombreUsuario  + " " + ApellidoUsuario ;
+            this.label3.Text = CorreoUsuario;
             buscar(userName);
-          /* if (label1.Text == "JREYES777")
-            {
-               // Image Foto = Image.FromFile("Goku.jpg");
-                this.pictureBox1.Image = Properties.Resources.Dokkaebi;
-                this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-           */
 
 
         }
@@ -144,7 +138,7 @@ namespace Intelident
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-           // FormActual.Close();
+           FormActual.Close();
             Reset();
         }
 
@@ -152,7 +146,7 @@ namespace Intelident
         {
             DesactivarBoton();
             leftBorderBtn.Visible = false;
-            iconCurrent.IconChar = IconChar.Home;
+            iconCurrent.IconChar = IconChar.HouseUser;
             iconCurrent.IconColor = Color.MediumPurple;
             Labelinicio.Text = "Inicio";
         }
@@ -168,6 +162,7 @@ namespace Intelident
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ActivarBoton(sender, RGBColors.color2);
+            OpenForm(new Inventario());
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -265,7 +260,11 @@ namespace Intelident
                     Cerrrar();
             }
         }
-        
-    
+
+        private void iconPictureBox4_Click(object sender, EventArgs e)
+        {
+            FormActual.Close();
+            Reset();
+        }
     }
 }
