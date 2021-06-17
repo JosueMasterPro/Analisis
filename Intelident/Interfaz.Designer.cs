@@ -355,7 +355,7 @@ namespace Intelident
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 50;
@@ -366,7 +366,7 @@ namespace Intelident
             this.iconButton4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.iconButton4.Size = new System.Drawing.Size(381, 72);
             this.iconButton4.TabIndex = 4;
-            this.iconButton4.Text = "iconButton4";
+            this.iconButton4.Text = "Reportes";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;

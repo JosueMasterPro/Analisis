@@ -176,6 +176,7 @@ namespace Intelident
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ActivarBoton(sender, RGBColors.color4);
+            OpenForm(new Reportes());
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
