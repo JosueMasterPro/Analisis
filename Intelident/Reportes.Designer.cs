@@ -1,5 +1,4 @@
-﻿
-namespace Intelident
+﻿namespace Intelident
 {
     partial class Reportes
     {
@@ -35,7 +34,7 @@ namespace Intelident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 660);
+            this.ClientSize = new System.Drawing.Size(857, 510);
             this.Name = "Reportes";
             this.Text = "Reportes";
             this.ResumeLayout(false);
