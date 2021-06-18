@@ -22,6 +22,8 @@ namespace Intelident
             this.TxtContraseña.UseSystemPasswordChar = true;
             this.TxtConfirmarContra.UseSystemPasswordChar = true;
         }
+
+        static string conn = Form1.conn;
         private void Limpiar()
         {
             TxtUsuario.Text = "";
@@ -92,7 +94,7 @@ namespace Intelident
         }
         public static SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            SqlConnection cn = new SqlConnection(conn);
 
             cn.Open();
             return cn;
@@ -100,7 +102,7 @@ namespace Intelident
         }
         public static SqlConnection Cerrrar()
         {
-            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            SqlConnection cn = new SqlConnection(conn);
             cn.Close();
             return cn;
         }

@@ -42,6 +42,8 @@ namespace Intelident
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.buttonDev = new FontAwesome.Sharp.IconButton();
+            this.comboBoxDev = new System.Windows.Forms.ComboBox();
             this.PanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -111,6 +113,8 @@ namespace Intelident
             // PanelMain
             // 
             this.PanelMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelMain.Controls.Add(this.comboBoxDev);
+            this.PanelMain.Controls.Add(this.buttonDev);
             this.PanelMain.Controls.Add(this.textBox1);
             this.PanelMain.Controls.Add(this.label3);
             this.PanelMain.Controls.Add(this.textBox2);
@@ -201,6 +205,41 @@ namespace Intelident
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
+            // buttonDev
+            // 
+            this.buttonDev.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDev.BackColor = System.Drawing.Color.Transparent;
+            this.buttonDev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonDev.FlatAppearance.BorderSize = 0;
+            this.buttonDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDev.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonDev.IconChar = FontAwesome.Sharp.IconChar.Dev;
+            this.buttonDev.IconColor = System.Drawing.Color.Black;
+            this.buttonDev.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonDev.Location = new System.Drawing.Point(675, 15);
+            this.buttonDev.Name = "buttonDev";
+            this.buttonDev.Size = new System.Drawing.Size(41, 34);
+            this.buttonDev.TabIndex = 12;
+            this.buttonDev.UseVisualStyleBackColor = false;
+            this.buttonDev.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // comboBoxDev
+            // 
+            this.comboBoxDev.Enabled = false;
+            this.comboBoxDev.FormattingEnabled = true;
+            this.comboBoxDev.Items.AddRange(new object[] {
+            "frank",
+            "josue"});
+            this.comboBoxDev.Location = new System.Drawing.Point(595, 55);
+            this.comboBoxDev.Name = "comboBoxDev";
+            this.comboBoxDev.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxDev.TabIndex = 13;
+            this.comboBoxDev.Visible = false;
+            this.comboBoxDev.SelectedValueChanged += new System.EventHandler(this.comboBoxDev_SelectedValueChanged);
+            this.comboBoxDev.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxDev_MouseClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -239,6 +278,8 @@ namespace Intelident
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel PanelMain;
+        private FontAwesome.Sharp.IconButton buttonDev;
+        private System.Windows.Forms.ComboBox comboBoxDev;
     }
 }
 
