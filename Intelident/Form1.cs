@@ -43,13 +43,16 @@ namespace Intelident
         public string Apellido { get; set; }
         public string Celular { get; set; }
         public string Correo { get; set; }
-      
 
 
-
+        static string connFrank = "data source = LAPTOP-F5HMK65R; initial catalog = ClasePruebaBD2; user id = admin; password = serviceSQL";
+        static string connJosue = "data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412";
+        public static string conn=null;
         public static SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            Console.WriteLine(conn);
+            SqlConnection cn = new SqlConnection(conn);
+            
 
             cn.Open();
             return cn;
@@ -57,7 +60,7 @@ namespace Intelident
         }
         public static SqlConnection Cerrrar()
         {
-            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            SqlConnection cn = new SqlConnection(conn);
             cn.Close();
             return cn;
         }
@@ -86,37 +89,44 @@ namespace Intelident
         }
 
 
-            private void iconButton1_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
+            if (conn == null)
+            {
+                conn = connJosue;
+                MessageBox.Show(conn);
+            }
             Conectar();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT COUNT(*) FROM ALogin WHERE Usuario='" + textBox1.Text + "'AND PWDCOMPARE('"+ textBox2.Text+"',contrasena)=1", Conectar());
+            SqlDataAdapter da = new SqlDataAdapter("SELECT COUNT(*) FROM ALogin WHERE Usuario='" + textBox1.Text + "'AND PWDCOMPARE('" + textBox2.Text + "',contrasena)=1", Conectar());
             DataTable dt = new DataTable();
             da.Fill(dt);
 
             if (dt.Rows[0][0].ToString() == "1")
             {
-                SqlCommand Comando = new SqlCommand("Select * from Alogin where Usuario=@Usuario",Conectar());
+                SqlCommand Comando = new SqlCommand("Select * from Alogin where Usuario=@Usuario", Conectar());
                 Comando.Parameters.AddWithValue("@Usuario", textBox1.Text);
                 SqlDataReader registro = Comando.ExecuteReader();
-
-                if (registro.Read())
-                {
-                    Nombre = registro["Nombre"].ToString();
-                    Apellido = registro["Apellido"].ToString();
-                    Celular = registro["Celular"].ToString();
-                    Correo = registro["Correo"].ToString();
-                }
-                userName = textBox1.Text;
-                this.Hide();
-                new Interfaz(userName,Nombre,Apellido,Celular,Correo).Show();
-            }
-            else
-            {
-                textBox1.Text = "";
-                textBox2.Text = "";
-                label3.Text = "Usuario o Contraseña Incorrecto";
-            }
+                
+                                if (registro.Read())
+                                {
+                                    Nombre = registro["Nombre"].ToString();
+                    Apellido = "";// registro["Apellido"].ToString();
+                    Celular = ""; // registro["Celular"].ToString();
+                    Correo = ""; // registro["Correo"].ToString();
+                                }
+                                userName = textBox1.Text;
+                                this.Hide();
+                                new Interfaz(userName,Nombre,Apellido,Celular,Correo).Show();
+                            }
+                            else
+                            {
+                                textBox1.Text = "";
+                                textBox2.Text = "";
+                                label3.Text = "Usuario o Contraseña Incorrecto";
+                            }
+                
+            
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -137,7 +147,37 @@ namespace Intelident
 
         private void iconPictureBox2_Click(object sender, EventArgs e)
         {
+            if (conn == null)
+            {
+                conn = connJosue;
+            }
             OpenForm(new Ingreso());
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.comboBoxDev.Enabled = true;
+            this.comboBoxDev.Visible = true;
+        }
+
+        private void comboBoxDev_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void comboBoxDev_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string selection = this.comboBoxDev.SelectedItem.ToString();
+            
+            switch (selection)
+            {
+                case "frank":
+                    conn = connFrank;
+                    break;
+                case "josue":
+                    conn = connJosue;
+                    break;
+            }
         }
     }
     
