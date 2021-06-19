@@ -49,65 +49,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ingreso.cs">
+    <Compile Include="fRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ingreso.Designer.cs">
-      <DependentUpon>Ingreso.cs</DependentUpon>
+    <Compile Include="fRegistro.Designer.cs">
+      <DependentUpon>fRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaz.cs">
+    <Compile Include="fMainHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaz.Designer.cs">
-      <DependentUpon>Interfaz.cs</DependentUpon>
+    <Compile Include="fMainHome.Designer.cs">
+      <DependentUpon>fMainHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventario.cs">
+    <Compile Include="fInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <Compile Include="fInventario.Designer.cs">
+      <DependentUpon>fInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RAverias.cs">
+    <Compile Include="fRAverias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RAverias.Designer.cs">
-      <DependentUpon>RAverias.cs</DependentUpon>
+    <Compile Include="fRAverias.Designer.cs">
+      <DependentUpon>fRAverias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes.cs">
+    <Compile Include="fReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes.Designer.cs">
-      <DependentUpon>Reportes.cs</DependentUpon>
+    <Compile Include="fReportes.Designer.cs">
+      <DependentUpon>fReportes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ingreso.resx">
-      <DependentUpon>Ingreso.cs</DependentUpon>
+    <EmbeddedResource Include="fRegistro.resx">
+      <DependentUpon>fRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaz.resx">
-      <DependentUpon>Interfaz.cs</DependentUpon>
+    <EmbeddedResource Include="fMainHome.resx">
+      <DependentUpon>fMainHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <EmbeddedResource Include="fInventario.resx">
+      <DependentUpon>fInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RAverias.resx">
-      <DependentUpon>RAverias.cs</DependentUpon>
+    <EmbeddedResource Include="fRAverias.resx">
+      <DependentUpon>fRAverias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes.resx">
-      <DependentUpon>Reportes.cs</DependentUpon>
+    <EmbeddedResource Include="fReportes.resx">
+      <DependentUpon>fReportes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -129,25 +130,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Intelident.png" />
+    <None Include="Resources\img\Intelident.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Goku.jpg" />
+    <None Include="Resources\img\Goku.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Vegeta.jpg" />
+    <None Include="Resources\img\Vegeta.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Dokkaebi.png" />
+    <None Include="Resources\img\Dokkaebi.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\raverias.jpg" />
+    <None Include="Resources\img\raverias.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\machine.png" />
+    <None Include="Resources\img\machine.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\piece.jpg" />
+    <None Include="Resources\img\piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\db\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
