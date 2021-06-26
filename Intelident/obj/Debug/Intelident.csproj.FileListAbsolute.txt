@@ -27,3 +27,20 @@ C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\I
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.pdb
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Inventario.resources
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.RAverias.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.exe.config
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.exe
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.pdb
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csprojAssemblyReference.cache
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fLogin.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fMainHome.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fInventario.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Properties.Resources.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fRAverias.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fReportes.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.GenerateResource.cache
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.CoreCompileInputs.cache
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.CopyComplete
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.exe
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.pdb
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fRDiario.resources
