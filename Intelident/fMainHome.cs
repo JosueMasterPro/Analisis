@@ -39,13 +39,14 @@ namespace Intelident
             leftBorderBtn.Size = new Size(7, 60);
             panelMenuMain.Controls.Add(leftBorderBtn);
             //form
+           
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            Usuario = userName;
-            this.labelUser.Text = Usuario;
+           // this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            this.labelUser.Text = userName;
 
 
 

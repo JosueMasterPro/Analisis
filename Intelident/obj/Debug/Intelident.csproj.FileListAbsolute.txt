@@ -44,3 +44,6 @@ C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelid
 C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.exe
 C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.pdb
 C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fRDiario.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\es\Intelident.resources.dll
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.fMainHome.es.resources
+C:\Users\frank\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\es\Intelident.resources.dll

@@ -90,6 +90,9 @@
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fMainHome.es.resx">
+      <DependentUpon>fMainHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fRDiario.resx">
       <DependentUpon>fRDiario.cs</DependentUpon>
     </EmbeddedResource>
