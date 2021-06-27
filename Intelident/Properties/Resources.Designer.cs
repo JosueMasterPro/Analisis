@@ -63,6 +63,16 @@ namespace Intelident.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dokkaebi {
+            get {
+                object obj = ResourceManager.GetObject("Dokkaebi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Goku {
             get {
                 object obj = ResourceManager.GetObject("Goku", resourceCulture);
@@ -83,39 +93,19 @@ namespace Intelident.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap machine {
-            get {
-                object obj = ResourceManager.GetObject("machine", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap piece {
-            get {
-                object obj = ResourceManager.GetObject("piece", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap raverias {
-            get {
-                object obj = ResourceManager.GetObject("raverias", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Vegeta {
             get {
                 object obj = ResourceManager.GetObject("Vegeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vegeta_dragon_ball_super_3840x2160_xtrafondos_com {
+            get {
+                object obj = ResourceManager.GetObject("vegeta-dragon-ball-super_3840x2160_xtrafondos.com", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -62,7 +62,7 @@ namespace Intelident
                     SqlCom.ExecuteNonQuery();
 
                     // Mostrar un mensaje de confirmación
-                    MessageBox.Show("Usuario Guardado correctamente", "Guardar Nota", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nota almacenada correctamente", "Guardar Nota", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
