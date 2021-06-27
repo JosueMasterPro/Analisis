@@ -647,13 +647,14 @@ namespace Intelident
             this.Controls.Add(this.PanelBarra);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelFMainHome);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fMainHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Resize += new System.EventHandler(this.fMainHome_Resize);
             this.panel3.ResumeLayout(false);
             this.PanelBarra.ResumeLayout(false);
             this.PanelBarra.PerformLayout();

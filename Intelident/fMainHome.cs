@@ -39,7 +39,9 @@ namespace Intelident
             leftBorderBtn.Size = new Size(7, 60);
             panelMenuMain.Controls.Add(leftBorderBtn);
             //form
-           
+            this.BackColor = Color.Red;
+            panelFMainHome.Location = new Point(5, 5);
+            panelFMainHome.BackColor = Color.Green;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -217,6 +219,14 @@ namespace Intelident
 
         private void panelCurrentTaskbar_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void fMainHome_Resize(object sender, EventArgs e)
+        {
+            panelFMainHome.Location = new Point(5, 5);
+            panelFMainHome.Width = this.ClientRectangle.Width - 10;
+            panelFMainHome.Height = this.ClientRectangle.Height - 10;
 
         }
     }
