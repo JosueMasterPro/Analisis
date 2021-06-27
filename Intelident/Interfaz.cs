@@ -22,7 +22,6 @@ namespace Intelident
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form FormActual;
-        public string Usuario;
         public string NombreUsuario;
         public string ApellidoUsuario;
         public string CelularUsuario;
@@ -44,7 +43,7 @@ namespace Intelident
         }
 
         //Constructor
-        public Interfaz(string userName, string Nombre, string Apellido,string Celular, string correo )
+        public Interfaz(/*string userName, string Nombre, string Apellido,string Celular, string correo */)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -56,18 +55,19 @@ namespace Intelident
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            Usuario = userName;
-            NombreUsuario = Nombre;
-            ApellidoUsuario = Apellido;
-            CelularUsuario = Celular;
-            CorreoUsuario = correo;
-            this.label1.Text = Usuario;
-            this.label2.Text = NombreUsuario  + " " + ApellidoUsuario ;
-            this.label3.Text = CelularUsuario;
-            buscar(userName);
+            PSubMenu.Visible = false;
+            //this.label1.Text = userName;
+            //NombreUsuario = Nombre;
+            //ApellidoUsuario = Apellido;
+            //CelularUsuario = Celular;
+            //CorreoUsuario = correo;
+            //this.label2.Text = NombreUsuario;
+            //this.label3.Text = ApellidoUsuario;
+            //buscar(userName);
 
 
         }
+        //Colores
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -77,6 +77,28 @@ namespace Intelident
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
+        //subMenus
+        private void SubmenuHide()
+        {
+            if (PSubMenu.Visible == true)
+            {
+                PSubMenu.Visible = false;
+            }
+        }
+        private void SubMenusShow(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                SubmenuHide();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
+
+
         private void ActivarBoton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -140,7 +162,7 @@ namespace Intelident
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-           FormActual.Close();
+            FormActual.Close();
             Reset();
         }
 
@@ -148,7 +170,7 @@ namespace Intelident
         {
             DesactivarBoton();
             leftBorderBtn.Visible = false;
-            iconCurrent.IconChar = IconChar.HouseUser;
+            iconCurrent.IconChar = IconChar.Home;
             iconCurrent.IconColor = Color.MediumPurple;
             Labelinicio.Text = "Inicio";
         }
@@ -157,49 +179,14 @@ namespace Intelident
         {
             ActivarBoton(sender, RGBColors.color1);
             //Agregar formulario y enviarloselo al openForm
-            //OpenForm(new Ingreso());
+            OpenForm(new RpVentas());
             //nota importante, al crear el form debemos darle la propiedad que siempre este centrado asi se movera con la app
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            ActivarBoton(sender, RGBColors.color2);
-            OpenForm(new Inventario());
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivarBoton(sender, RGBColors.color3);
-            OpenForm(new RAverias());
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            ActivarBoton(sender, RGBColors.color4);
-            OpenForm(new Reportes());
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            if (Usuario == "JREYES") { 
-                ActivarBoton(sender, RGBColors.color5);
-                OpenForm(new Ingreso());
-            }
-            else
-            {
-                MessageBox.Show("No Tiene Permiso de Acceder aqui");
-            }
-        }
-
-        private void iconButton6_Click(object sender, EventArgs e)
-        {
-            ActivarBoton(sender, RGBColors.color6);
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 main = new Form1();
+            Login main = new Login();
             main.Show();
         }
 
@@ -272,10 +259,55 @@ namespace Intelident
             }
         }
 
-        private void iconPictureBox4_Click(object sender, EventArgs e)
+        private void iconButtonInventario_Click(object sender, EventArgs e)
         {
+            ActivarBoton(sender, RGBColors.color2);
+            OpenForm(new fInventario());
+        }
+
+        private void iconButtonRDiario_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color3);
+        }
+
+        private void iconButtonRAverias_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color4);
+            OpenForm(new fRAverias());
+        }
+
+        private void iconButtonReportes_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color5);
+            OpenForm(new RpVentas());
+            SubmenuHide();
+            PanelMenu.Visible = false;
+            // SubMenusShow(PSubMenu);
+            //OpenForm(new fReportes());
+        }
+
+        private void iconButtonConfiguracion_Click(object sender, EventArgs e)
+        {
+            //ActivarBoton(sender, RGBColors.color6);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, Color.MediumPurple);
+            OpenForm(new RpVentas());
+            SubmenuHide();
+            PanelMenu.Visible = false;
+        }
+
+        private void iconButtonConfiguracion_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconCurrent_Click(object sender, EventArgs e)
+        {
+            PanelMenu.Visible = true;
             FormActual.Close();
-            Reset();
         }
     }
 }
