@@ -100,7 +100,7 @@ namespace Intelident
             this.PanelBarra.Name = "PanelBarra";
             this.PanelBarra.Size = new System.Drawing.Size(1279, 99);
             this.PanelBarra.TabIndex = 5;
-            this.PanelBarra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarra_MouseDown);
+//            this.PanelBarra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarra_MouseDown);
             // 
             // panel2
             // 

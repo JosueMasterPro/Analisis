@@ -45,6 +45,8 @@ namespace Intelident
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.pBotones = new System.Windows.Forms.Panel();
             this.pRPaverias = new System.Windows.Forms.Panel();
+            this.iconButton16 = new FontAwesome.Sharp.IconButton();
+            this.iconButton15 = new FontAwesome.Sharp.IconButton();
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.pRpInv = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@ namespace Intelident
             this.iconButton11 = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.bindingSourceinv = new System.Windows.Forms.BindingSource(this.components);
-            this.iconButton15 = new FontAwesome.Sharp.IconButton();
-            this.iconButton16 = new FontAwesome.Sharp.IconButton();
             this.bdReportes = new Intelident.Reportes.BDReportes();
             this.bindingSourceAverias = new System.Windows.Forms.BindingSource(this.components);
             this.spRpInventarioTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spRpInventarioTableAdapter();
@@ -214,7 +214,7 @@ namespace Intelident
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(271, 85);
             this.iconButton4.TabIndex = 7;
-            this.iconButton4.Text = "Reporte de Ventas";
+            this.iconButton4.Text = "Reporte de Maquinas";
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
             // 
@@ -327,6 +327,42 @@ namespace Intelident
             this.pRPaverias.Name = "pRPaverias";
             this.pRPaverias.Size = new System.Drawing.Size(271, 595);
             this.pRPaverias.TabIndex = 4;
+            // 
+            // iconButton16
+            // 
+            this.iconButton16.BackColor = System.Drawing.Color.Navy;
+            this.iconButton16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton16.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton16.ForeColor = System.Drawing.Color.White;
+            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton16.IconColor = System.Drawing.Color.White;
+            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton16.Location = new System.Drawing.Point(23, 300);
+            this.iconButton16.Name = "iconButton16";
+            this.iconButton16.Size = new System.Drawing.Size(187, 65);
+            this.iconButton16.TabIndex = 9;
+            this.iconButton16.Text = "Generar Reporte Comun";
+            this.iconButton16.UseVisualStyleBackColor = false;
+            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
+            // 
+            // iconButton15
+            // 
+            this.iconButton15.BackColor = System.Drawing.Color.Navy;
+            this.iconButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton15.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton15.ForeColor = System.Drawing.Color.White;
+            this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton15.IconColor = System.Drawing.Color.White;
+            this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton15.Location = new System.Drawing.Point(23, 208);
+            this.iconButton15.Name = "iconButton15";
+            this.iconButton15.Size = new System.Drawing.Size(187, 65);
+            this.iconButton15.TabIndex = 8;
+            this.iconButton15.Text = "Generar Reporte detallado";
+            this.iconButton15.UseVisualStyleBackColor = false;
+            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
             // 
             // iconButton14
             // 
@@ -519,42 +555,6 @@ namespace Intelident
             // 
             this.bindingSourceinv.DataMember = "spRpInventario";
             this.bindingSourceinv.DataSource = this.bdReportes;
-            // 
-            // iconButton15
-            // 
-            this.iconButton15.BackColor = System.Drawing.Color.Navy;
-            this.iconButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton15.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton15.ForeColor = System.Drawing.Color.White;
-            this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton15.IconColor = System.Drawing.Color.White;
-            this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton15.Location = new System.Drawing.Point(23, 208);
-            this.iconButton15.Name = "iconButton15";
-            this.iconButton15.Size = new System.Drawing.Size(187, 65);
-            this.iconButton15.TabIndex = 8;
-            this.iconButton15.Text = "Generar Reporte detallado";
-            this.iconButton15.UseVisualStyleBackColor = false;
-            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
-            // 
-            // iconButton16
-            // 
-            this.iconButton16.BackColor = System.Drawing.Color.Navy;
-            this.iconButton16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton16.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton16.ForeColor = System.Drawing.Color.White;
-            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton16.IconColor = System.Drawing.Color.White;
-            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton16.Location = new System.Drawing.Point(23, 300);
-            this.iconButton16.Name = "iconButton16";
-            this.iconButton16.Size = new System.Drawing.Size(187, 65);
-            this.iconButton16.TabIndex = 9;
-            this.iconButton16.Text = "Generar Reporte Comun";
-            this.iconButton16.UseVisualStyleBackColor = false;
-            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
             // 
             // bdReportes
             // 

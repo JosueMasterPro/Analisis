@@ -34,6 +34,8 @@ namespace Intelident.Reportes {
         
         private spAveriaMaquinaDataTable tablespAveriaMaquina;
         
+        private spInventarioPiezaMaquinaDataTable tablespInventarioPiezaMaquina;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -76,6 +78,9 @@ namespace Intelident.Reportes {
                 }
                 if ((ds.Tables["spAveriaMaquina"] != null)) {
                     base.Tables.Add(new spAveriaMaquinaDataTable(ds.Tables["spAveriaMaquina"]));
+                }
+                if ((ds.Tables["spInventarioPiezaMaquina"] != null)) {
+                    base.Tables.Add(new spInventarioPiezaMaquinaDataTable(ds.Tables["spInventarioPiezaMaquina"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -142,6 +147,16 @@ namespace Intelident.Reportes {
         public spAveriaMaquinaDataTable spAveriaMaquina {
             get {
                 return this.tablespAveriaMaquina;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spInventarioPiezaMaquinaDataTable spInventarioPiezaMaquina {
+            get {
+                return this.tablespInventarioPiezaMaquina;
             }
         }
         
@@ -227,6 +242,9 @@ namespace Intelident.Reportes {
                 if ((ds.Tables["spAveriaMaquina"] != null)) {
                     base.Tables.Add(new spAveriaMaquinaDataTable(ds.Tables["spAveriaMaquina"]));
                 }
+                if ((ds.Tables["spInventarioPiezaMaquina"] != null)) {
+                    base.Tables.Add(new spInventarioPiezaMaquinaDataTable(ds.Tables["spInventarioPiezaMaquina"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -290,6 +308,12 @@ namespace Intelident.Reportes {
                     this.tablespAveriaMaquina.InitVars();
                 }
             }
+            this.tablespInventarioPiezaMaquina = ((spInventarioPiezaMaquinaDataTable)(base.Tables["spInventarioPiezaMaquina"]));
+            if ((initTable == true)) {
+                if ((this.tablespInventarioPiezaMaquina != null)) {
+                    this.tablespInventarioPiezaMaquina.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -310,6 +334,8 @@ namespace Intelident.Reportes {
             base.Tables.Add(this.tablespAveriaDetallada);
             this.tablespAveriaMaquina = new spAveriaMaquinaDataTable();
             base.Tables.Add(this.tablespAveriaMaquina);
+            this.tablespInventarioPiezaMaquina = new spInventarioPiezaMaquinaDataTable();
+            base.Tables.Add(this.tablespInventarioPiezaMaquina);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -339,6 +365,12 @@ namespace Intelident.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializespAveriaMaquina() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespInventarioPiezaMaquina() {
             return false;
         }
         
@@ -411,6 +443,9 @@ namespace Intelident.Reportes {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void spAveriaMaquinaRowChangeEventHandler(object sender, spAveriaMaquinaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spInventarioPiezaMaquinaRowChangeEventHandler(object sender, spInventarioPiezaMaquinaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1735,8 +1770,6 @@ namespace Intelident.Reportes {
             
             private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnMaquina;
-            
             private global::System.Data.DataColumn columnModelo;
             
             private global::System.Data.DataColumn columnDescripcion;
@@ -1781,14 +1814,6 @@ namespace Intelident.Reportes {
             public global::System.Data.DataColumn NombreColumn {
                 get {
                     return this.columnNombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn MaquinaColumn {
-                get {
-                    return this.columnMaquina;
                 }
             }
             
@@ -1857,20 +1882,12 @@ namespace Intelident.Reportes {
                 spAveriaMaquinaRow rowspAveriaMaquinaRow = ((spAveriaMaquinaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
-                        null,
                         Modelo,
                         Descripcion,
                         Solucion};
                 rowspAveriaMaquinaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspAveriaMaquinaRow);
                 return rowspAveriaMaquinaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public spAveriaMaquinaRow FindByMaquina(int Maquina) {
-                return ((spAveriaMaquinaRow)(this.Rows.Find(new object[] {
-                            Maquina})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1891,7 +1908,6 @@ namespace Intelident.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnNombre = base.Columns["Nombre"];
-                this.columnMaquina = base.Columns["Maquina"];
                 this.columnModelo = base.Columns["Modelo"];
                 this.columnDescripcion = base.Columns["Descripcion"];
                 this.columnSolucion = base.Columns["Solucion"];
@@ -1902,23 +1918,13 @@ namespace Intelident.Reportes {
             private void InitClass() {
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnMaquina = new global::System.Data.DataColumn("Maquina", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaquina);
                 this.columnModelo = new global::System.Data.DataColumn("Modelo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnModelo);
                 this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcion);
                 this.columnSolucion = new global::System.Data.DataColumn("Solucion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSolucion);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMaquina}, true));
                 this.columnNombre.MaxLength = 100;
-                this.columnMaquina.AutoIncrement = true;
-                this.columnMaquina.AutoIncrementSeed = -1;
-                this.columnMaquina.AutoIncrementStep = -1;
-                this.columnMaquina.AllowDBNull = false;
-                this.columnMaquina.ReadOnly = true;
-                this.columnMaquina.Unique = true;
                 this.columnModelo.MaxLength = 15;
                 this.columnDescripcion.MaxLength = 500;
                 this.columnSolucion.MaxLength = 500;
@@ -2008,6 +2014,298 @@ namespace Intelident.Reportes {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "spAveriaMaquinaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spInventarioPiezaMaquinaDataTable : global::System.Data.TypedTableBase<spInventarioPiezaMaquinaRow> {
+            
+            private global::System.Data.DataColumn columnSerie;
+            
+            private global::System.Data.DataColumn columnModelo;
+            
+            private global::System.Data.DataColumn columnCantidad;
+            
+            private global::System.Data.DataColumn columnTotalFacturado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spInventarioPiezaMaquinaDataTable() {
+                this.TableName = "spInventarioPiezaMaquina";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spInventarioPiezaMaquinaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spInventarioPiezaMaquinaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SerieColumn {
+                get {
+                    return this.columnSerie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ModeloColumn {
+                get {
+                    return this.columnModelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CantidadColumn {
+                get {
+                    return this.columnCantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TotalFacturadoColumn {
+                get {
+                    return this.columnTotalFacturado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spInventarioPiezaMaquinaRow this[int index] {
+                get {
+                    return ((spInventarioPiezaMaquinaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spInventarioPiezaMaquinaRowChangeEventHandler spInventarioPiezaMaquinaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spInventarioPiezaMaquinaRowChangeEventHandler spInventarioPiezaMaquinaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spInventarioPiezaMaquinaRowChangeEventHandler spInventarioPiezaMaquinaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spInventarioPiezaMaquinaRowChangeEventHandler spInventarioPiezaMaquinaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspInventarioPiezaMaquinaRow(spInventarioPiezaMaquinaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spInventarioPiezaMaquinaRow AddspInventarioPiezaMaquinaRow(string Serie, string Modelo, int Cantidad, decimal TotalFacturado) {
+                spInventarioPiezaMaquinaRow rowspInventarioPiezaMaquinaRow = ((spInventarioPiezaMaquinaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Serie,
+                        Modelo,
+                        Cantidad,
+                        TotalFacturado};
+                rowspInventarioPiezaMaquinaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspInventarioPiezaMaquinaRow);
+                return rowspInventarioPiezaMaquinaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spInventarioPiezaMaquinaDataTable cln = ((spInventarioPiezaMaquinaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spInventarioPiezaMaquinaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnSerie = base.Columns["Serie"];
+                this.columnModelo = base.Columns["Modelo"];
+                this.columnCantidad = base.Columns["Cantidad"];
+                this.columnTotalFacturado = base.Columns["TotalFacturado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnSerie = new global::System.Data.DataColumn("Serie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerie);
+                this.columnModelo = new global::System.Data.DataColumn("Modelo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModelo);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
+                this.columnTotalFacturado = new global::System.Data.DataColumn("TotalFacturado", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalFacturado);
+                this.columnSerie.MaxLength = 15;
+                this.columnModelo.MaxLength = 15;
+                this.columnTotalFacturado.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spInventarioPiezaMaquinaRow NewspInventarioPiezaMaquinaRow() {
+                return ((spInventarioPiezaMaquinaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spInventarioPiezaMaquinaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spInventarioPiezaMaquinaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spInventarioPiezaMaquinaRowChanged != null)) {
+                    this.spInventarioPiezaMaquinaRowChanged(this, new spInventarioPiezaMaquinaRowChangeEvent(((spInventarioPiezaMaquinaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spInventarioPiezaMaquinaRowChanging != null)) {
+                    this.spInventarioPiezaMaquinaRowChanging(this, new spInventarioPiezaMaquinaRowChangeEvent(((spInventarioPiezaMaquinaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spInventarioPiezaMaquinaRowDeleted != null)) {
+                    this.spInventarioPiezaMaquinaRowDeleted(this, new spInventarioPiezaMaquinaRowChangeEvent(((spInventarioPiezaMaquinaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spInventarioPiezaMaquinaRowDeleting != null)) {
+                    this.spInventarioPiezaMaquinaRowDeleting(this, new spInventarioPiezaMaquinaRowChangeEvent(((spInventarioPiezaMaquinaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespInventarioPiezaMaquinaRow(spInventarioPiezaMaquinaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                BDReportes ds = new BDReportes();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spInventarioPiezaMaquinaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2825,17 +3123,6 @@ namespace Intelident.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Maquina {
-                get {
-                    return ((int)(this[this.tablespAveriaMaquina.MaquinaColumn]));
-                }
-                set {
-                    this[this.tablespAveriaMaquina.MaquinaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Modelo {
                 get {
                     try {
@@ -2928,6 +3215,136 @@ namespace Intelident.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSolucionNull() {
                 this[this.tablespAveriaMaquina.SolucionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spInventarioPiezaMaquinaRow : global::System.Data.DataRow {
+            
+            private spInventarioPiezaMaquinaDataTable tablespInventarioPiezaMaquina;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spInventarioPiezaMaquinaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespInventarioPiezaMaquina = ((spInventarioPiezaMaquinaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Serie {
+                get {
+                    try {
+                        return ((string)(this[this.tablespInventarioPiezaMaquina.SerieColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Serie\' de la tabla \'spInventarioPiezaMaquina\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespInventarioPiezaMaquina.SerieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Modelo {
+                get {
+                    try {
+                        return ((string)(this[this.tablespInventarioPiezaMaquina.ModeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Modelo\' de la tabla \'spInventarioPiezaMaquina\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespInventarioPiezaMaquina.ModeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Cantidad {
+                get {
+                    try {
+                        return ((int)(this[this.tablespInventarioPiezaMaquina.CantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad\' de la tabla \'spInventarioPiezaMaquina\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespInventarioPiezaMaquina.CantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal TotalFacturado {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespInventarioPiezaMaquina.TotalFacturadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TotalFacturado\' de la tabla \'spInventarioPiezaMaquina\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespInventarioPiezaMaquina.TotalFacturadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSerieNull() {
+                return this.IsNull(this.tablespInventarioPiezaMaquina.SerieColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSerieNull() {
+                this[this.tablespInventarioPiezaMaquina.SerieColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsModeloNull() {
+                return this.IsNull(this.tablespInventarioPiezaMaquina.ModeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetModeloNull() {
+                this[this.tablespInventarioPiezaMaquina.ModeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCantidadNull() {
+                return this.IsNull(this.tablespInventarioPiezaMaquina.CantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCantidadNull() {
+                this[this.tablespInventarioPiezaMaquina.CantidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTotalFacturadoNull() {
+                return this.IsNull(this.tablespInventarioPiezaMaquina.TotalFacturadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTotalFacturadoNull() {
+                this[this.tablespInventarioPiezaMaquina.TotalFacturadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3087,6 +3504,40 @@ namespace Intelident.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public spAveriaMaquinaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spInventarioPiezaMaquinaRowChangeEvent : global::System.EventArgs {
+            
+            private spInventarioPiezaMaquinaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spInventarioPiezaMaquinaRowChangeEvent(spInventarioPiezaMaquinaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spInventarioPiezaMaquinaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4038,7 +4489,6 @@ namespace Intelident.Reportes.BDReportesTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "spAveriaMaquina";
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("Maquina", "Maquina");
             tableMapping.ColumnMappings.Add("Modelo", "Modelo");
             tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
             tableMapping.ColumnMappings.Add("Solucion", "Solucion");
@@ -4083,6 +4533,177 @@ namespace Intelident.Reportes.BDReportesTableAdapters {
         public virtual BDReportes.spAveriaMaquinaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             BDReportes.spAveriaMaquinaDataTable dataTable = new BDReportes.spAveriaMaquinaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spInventarioPiezaMaquinaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spInventarioPiezaMaquinaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spInventarioPiezaMaquina";
+            tableMapping.ColumnMappings.Add("Serie", "Serie");
+            tableMapping.ColumnMappings.Add("Modelo", "Modelo");
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
+            tableMapping.ColumnMappings.Add("TotalFacturado", "TotalFacturado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Intelident.Properties.Settings.Default.Coneccion;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spInventarioPiezaMaquina";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(BDReportes.spInventarioPiezaMaquinaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual BDReportes.spInventarioPiezaMaquinaDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            BDReportes.spInventarioPiezaMaquinaDataTable dataTable = new BDReportes.spInventarioPiezaMaquinaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
