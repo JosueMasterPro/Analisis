@@ -50,11 +50,18 @@ namespace Intelident
             leftBorderBtn.Size = new Size(7, 60);
             PanelMenu.Controls.Add(leftBorderBtn);
             //form
+<<<<<<<< HEAD:Intelident/Interfaz.cs
+========
+            //this.BackColor = Color.Red;
+            //panelFMainHome.Location = new Point(5, 5);
+            //panelFMainHome.BackColor = Color.Green;
+>>>>>>>> 489c4258da744251c0cc679fa2fdf0f82ba97276:Intelident/fMainHome.cs
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+<<<<<<<< HEAD:Intelident/Interfaz.cs
             PSubMenu.Visible = false;
             //this.label1.Text = userName;
             //NombreUsuario = Nombre;
@@ -64,6 +71,10 @@ namespace Intelident
             //this.label2.Text = NombreUsuario;
             //this.label3.Text = ApellidoUsuario;
             //buscar(userName);
+========
+            this.labelUser.Text = userName;
+
+>>>>>>>> 489c4258da744251c0cc679fa2fdf0f82ba97276:Intelident/fMainHome.cs
 
 
         }
@@ -150,7 +161,7 @@ namespace Intelident
             }
             FormActual = FormHijo;
             FormHijo.TopLevel = false;
-            FormHijo.FormBorderStyle = FormBorderStyle.None;
+            FormHijo.FormBorderStyle = FormBorderStyle.None; 
             FormHijo.Dock = DockStyle.Fill;
             PanelVisual.Controls.Add(FormHijo);
             PanelVisual.Tag = FormHijo;
@@ -290,6 +301,7 @@ namespace Intelident
         {
             //ActivarBoton(sender, RGBColors.color6);
         }
+<<<<<<<< HEAD:Intelident/Interfaz.cs
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
@@ -309,5 +321,7 @@ namespace Intelident
             PanelMenu.Visible = true;
             FormActual.Close();
         }
+========
+>>>>>>>> 489c4258da744251c0cc679fa2fdf0f82ba97276:Intelident/fMainHome.cs
     }
 }
