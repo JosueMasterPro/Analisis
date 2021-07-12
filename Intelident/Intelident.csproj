@@ -114,10 +114,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\BDReportes.cs">
+      <DependentUpon>BDReportes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Reportes\BDReportes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDReportes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="RpVentas.cs">
       <SubType>Form</SubType>
@@ -150,9 +155,14 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\averias.rdlc" />
+    <EmbeddedResource Include="Reportes\RpVentas.rdlc" />
+    <EmbeddedResource Include="Reportes\RpEGMaquinas.rdlc" />
+    <EmbeddedResource Include="Reportes\RpEstadoDetMaquina.rdlc" />
+    <EmbeddedResource Include="Reportes\RpMDetallado.rdlc" />
     <EmbeddedResource Include="Reportes\RpAComunes.rdlc" />
     <EmbeddedResource Include="Reportes\RpDetalleAveria.rdlc" />
     <EmbeddedResource Include="Reportes\RpInventario.rdlc" />
+    <EmbeddedResource Include="Reportes\RpPxM.rdlc" />
     <EmbeddedResource Include="RpVentas.resx">
       <DependentUpon>RpVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,14 +188,17 @@
   <ItemGroup>
     <None Include="Reportes\BDReportes.xsc">
       <DependentUpon>BDReportes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Reportes\BDReportes.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BDReportes.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Reportes\BDReportes.xss">
       <DependentUpon>BDReportes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\Intelident.png" />
   </ItemGroup>

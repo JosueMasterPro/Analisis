@@ -29,7 +29,7 @@ namespace Intelident
 
         public static SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = Proyecto; user id = JosueReyes; password = Caracoles1412");
 
             cn.Open();
             return cn;
@@ -37,7 +37,7 @@ namespace Intelident
         }
         public static SqlConnection Cerrrar()
         {
-            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = ClasePruebaBD2; user id = JosueReyes; password = Caracoles1412");
+            SqlConnection cn = new SqlConnection("data source = LAPTOP-MTHU4RQT; initial catalog = Proyecto; user id = JosueReyes; password = Caracoles1412");
             cn.Close();
             return cn;
         }
@@ -95,6 +95,10 @@ namespace Intelident
             {
                 submenu.Visible = false;
             }
+        }
+        public void MostrarPanel()
+        {
+            PanelMenu.Visible = true;
         }
 
 
@@ -305,8 +309,25 @@ namespace Intelident
 
         private void iconCurrent_Click(object sender, EventArgs e)
         {
+            DesactivarBoton();
             PanelMenu.Visible = true;
             FormActual.Close();
+        }
+
+        private void iconPictureBox4_Click(object sender, EventArgs e)
+        {
+            DesactivarBoton();
+            PanelMenu.Visible = true;
+        }
+
+        private void Interfaz_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Interfaz_Activated(object sender, EventArgs e)
+        {
+
         }
     }
 }

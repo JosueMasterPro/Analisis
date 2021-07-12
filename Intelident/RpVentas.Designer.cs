@@ -32,10 +32,6 @@ namespace Intelident
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RpVentas));
             this.pOpciones = new System.Windows.Forms.Panel();
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -44,6 +40,11 @@ namespace Intelident
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.pBotones = new System.Windows.Forms.Panel();
+            this.pMantenimiento = new System.Windows.Forms.Panel();
+            this.iconButton19 = new FontAwesome.Sharp.IconButton();
+            this.iconButton18 = new FontAwesome.Sharp.IconButton();
+            this.pRpPxM = new System.Windows.Forms.Panel();
+            this.iconButton17 = new FontAwesome.Sharp.IconButton();
             this.pRPaverias = new System.Windows.Forms.Panel();
             this.iconButton16 = new FontAwesome.Sharp.IconButton();
             this.iconButton15 = new FontAwesome.Sharp.IconButton();
@@ -54,30 +55,35 @@ namespace Intelident
             this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.pRpVentas = new System.Windows.Forms.Panel();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pMargenInf = new System.Windows.Forms.Panel();
             this.pMargenSup = new System.Windows.Forms.Panel();
             this.iconButton11 = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.iconButton20 = new FontAwesome.Sharp.IconButton();
             this.bindingSourceinv = new System.Windows.Forms.BindingSource(this.components);
             this.bdReportes = new Intelident.Reportes.BDReportes();
             this.bindingSourceAverias = new System.Windows.Forms.BindingSource(this.components);
-            this.spRpInventarioTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spRpInventarioTableAdapter();
             this.spMaquinaAveriaTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spMaquinaAveriaTableAdapter();
             this.bindingSourceRDetallado = new System.Windows.Forms.BindingSource(this.components);
             this.spAveriaDetalladaTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spAveriaDetalladaTableAdapter();
             this.bindingSourceAComunes = new System.Windows.Forms.BindingSource(this.components);
             this.spAveriaMaquinaTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spAveriaMaquinaTableAdapter();
-            this.pRpPxM = new System.Windows.Forms.Panel();
-            this.iconButton17 = new FontAwesome.Sharp.IconButton();
             this.bindingSourcePxM = new System.Windows.Forms.BindingSource(this.components);
             this.spInventarioPiezaMaquinaTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spInventarioPiezaMaquinaTableAdapter();
+            this.spRpInventarioTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spRpInventarioTableAdapter();
+            this.bindingSourceMantenimiento = new System.Windows.Forms.BindingSource(this.components);
+            this.spMantenimientoSemanalDetalladoTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spMantenimientoSemanalDetalladoTableAdapter();
+            this.bindingSourceDMantenimiento = new System.Windows.Forms.BindingSource(this.components);
+            this.spDetalladoTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spDetalladoTableAdapter();
+            this.bindingSourceGMaquina = new System.Windows.Forms.BindingSource(this.components);
+            this.spAveriaMaquinaLugarTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spAveriaMaquinaLugarTableAdapter();
+            this.bindingSourceVentas = new System.Windows.Forms.BindingSource(this.components);
+            this.spVentasTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spVentasTableAdapter();
             this.pOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pBotones.SuspendLayout();
+            this.pMantenimiento.SuspendLayout();
+            this.pRpPxM.SuspendLayout();
             this.pRPaverias.SuspendLayout();
             this.pRpInv.SuspendLayout();
             this.pRpVentas.SuspendLayout();
@@ -87,17 +93,16 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAverias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRDetallado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAComunes)).BeginInit();
-            this.pRpPxM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePxM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceMantenimiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDMantenimiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGMaquina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // pOpciones
             // 
             this.pOpciones.BackColor = System.Drawing.Color.Blue;
-            this.pOpciones.Controls.Add(this.iconButton9);
-            this.pOpciones.Controls.Add(this.iconButton8);
-            this.pOpciones.Controls.Add(this.iconButton7);
-            this.pOpciones.Controls.Add(this.iconButton6);
             this.pOpciones.Controls.Add(this.iconButton5);
             this.pOpciones.Controls.Add(this.iconButton4);
             this.pOpciones.Controls.Add(this.iconButton3);
@@ -109,82 +114,6 @@ namespace Intelident
             this.pOpciones.Name = "pOpciones";
             this.pOpciones.Size = new System.Drawing.Size(271, 807);
             this.pOpciones.TabIndex = 1;
-            // 
-            // iconButton9
-            // 
-            this.iconButton9.BackColor = System.Drawing.Color.Navy;
-            this.iconButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton9.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton9.ForeColor = System.Drawing.Color.White;
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton9.IconColor = System.Drawing.Color.White;
-            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton9.Location = new System.Drawing.Point(0, 755);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Size = new System.Drawing.Size(271, 85);
-            this.iconButton9.TabIndex = 12;
-            this.iconButton9.Text = "Reporte de Ventas";
-            this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton9.UseVisualStyleBackColor = false;
-            // 
-            // iconButton8
-            // 
-            this.iconButton8.BackColor = System.Drawing.Color.Navy;
-            this.iconButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton8.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton8.ForeColor = System.Drawing.Color.White;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton8.IconColor = System.Drawing.Color.White;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.Location = new System.Drawing.Point(0, 670);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(271, 85);
-            this.iconButton8.TabIndex = 11;
-            this.iconButton8.Text = "Reporte de Ventas";
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = false;
-            // 
-            // iconButton7
-            // 
-            this.iconButton7.BackColor = System.Drawing.Color.Navy;
-            this.iconButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton7.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton7.IconColor = System.Drawing.Color.White;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(0, 585);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(271, 85);
-            this.iconButton7.TabIndex = 10;
-            this.iconButton7.Text = "Reporte de Ventas";
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = false;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.BackColor = System.Drawing.Color.Navy;
-            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(0, 500);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(271, 85);
-            this.iconButton6.TabIndex = 9;
-            this.iconButton6.Text = "Reporte de Ventas";
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = false;
             // 
             // iconButton5
             // 
@@ -201,9 +130,10 @@ namespace Intelident
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(271, 85);
             this.iconButton5.TabIndex = 8;
-            this.iconButton5.Text = "Reporte de Ventas";
+            this.iconButton5.Text = "Reporte de Mantenimiento";
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // iconButton4
             // 
@@ -309,10 +239,12 @@ namespace Intelident
             this.iconButton10.Size = new System.Drawing.Size(73, 75);
             this.iconButton10.TabIndex = 0;
             this.iconButton10.UseVisualStyleBackColor = false;
+            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
             // 
             // pBotones
             // 
             this.pBotones.BackColor = System.Drawing.Color.Blue;
+            this.pBotones.Controls.Add(this.pMantenimiento);
             this.pBotones.Controls.Add(this.pRpPxM);
             this.pBotones.Controls.Add(this.pRPaverias);
             this.pBotones.Controls.Add(this.pRpInv);
@@ -325,15 +257,86 @@ namespace Intelident
             this.pBotones.Size = new System.Drawing.Size(271, 807);
             this.pBotones.TabIndex = 3;
             // 
+            // pMantenimiento
+            // 
+            this.pMantenimiento.Controls.Add(this.iconButton20);
+            this.pMantenimiento.Controls.Add(this.iconButton19);
+            this.pMantenimiento.Controls.Add(this.iconButton18);
+            this.pMantenimiento.Location = new System.Drawing.Point(0, 415);
+            this.pMantenimiento.Name = "pMantenimiento";
+            this.pMantenimiento.Size = new System.Drawing.Size(271, 255);
+            this.pMantenimiento.TabIndex = 6;
+            // 
+            // iconButton19
+            // 
+            this.iconButton19.BackColor = System.Drawing.Color.Navy;
+            this.iconButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton19.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton19.ForeColor = System.Drawing.Color.White;
+            this.iconButton19.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton19.IconColor = System.Drawing.Color.White;
+            this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton19.Location = new System.Drawing.Point(35, 222);
+            this.iconButton19.Name = "iconButton19";
+            this.iconButton19.Size = new System.Drawing.Size(187, 65);
+            this.iconButton19.TabIndex = 12;
+            this.iconButton19.Text = "Generar Reporte Detallado Mantenimiento";
+            this.iconButton19.UseVisualStyleBackColor = false;
+            this.iconButton19.Click += new System.EventHandler(this.iconButton19_Click);
+            // 
+            // iconButton18
+            // 
+            this.iconButton18.BackColor = System.Drawing.Color.Navy;
+            this.iconButton18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton18.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton18.ForeColor = System.Drawing.Color.White;
+            this.iconButton18.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton18.IconColor = System.Drawing.Color.White;
+            this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton18.Location = new System.Drawing.Point(35, 137);
+            this.iconButton18.Name = "iconButton18";
+            this.iconButton18.Size = new System.Drawing.Size(187, 65);
+            this.iconButton18.TabIndex = 11;
+            this.iconButton18.Text = "Generar Reporte De Mantenimiento";
+            this.iconButton18.UseVisualStyleBackColor = false;
+            this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
+            // 
+            // pRpPxM
+            // 
+            this.pRpPxM.Controls.Add(this.iconButton17);
+            this.pRpPxM.Location = new System.Drawing.Point(0, 395);
+            this.pRpPxM.Name = "pRpPxM";
+            this.pRpPxM.Size = new System.Drawing.Size(271, 275);
+            this.pRpPxM.TabIndex = 5;
+            // 
+            // iconButton17
+            // 
+            this.iconButton17.BackColor = System.Drawing.Color.Navy;
+            this.iconButton17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton17.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton17.ForeColor = System.Drawing.Color.White;
+            this.iconButton17.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton17.IconColor = System.Drawing.Color.White;
+            this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton17.Location = new System.Drawing.Point(38, 145);
+            this.iconButton17.Name = "iconButton17";
+            this.iconButton17.Size = new System.Drawing.Size(187, 65);
+            this.iconButton17.TabIndex = 10;
+            this.iconButton17.Text = "Generar Reporte Pieza x Maquina";
+            this.iconButton17.UseVisualStyleBackColor = false;
+            this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
+            // 
             // pRPaverias
             // 
             this.pRPaverias.Controls.Add(this.iconButton16);
             this.pRPaverias.Controls.Add(this.iconButton15);
             this.pRPaverias.Controls.Add(this.iconButton14);
-            this.pRPaverias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pRPaverias.Location = new System.Drawing.Point(0, 75);
+            this.pRPaverias.Location = new System.Drawing.Point(0, 375);
             this.pRPaverias.Name = "pRPaverias";
-            this.pRPaverias.Size = new System.Drawing.Size(271, 595);
+            this.pRPaverias.Size = new System.Drawing.Size(271, 295);
             this.pRPaverias.TabIndex = 4;
             // 
             // iconButton16
@@ -396,10 +399,9 @@ namespace Intelident
             this.pRpInv.Controls.Add(this.label3);
             this.pRpInv.Controls.Add(this.textBox1);
             this.pRpInv.Controls.Add(this.iconButton13);
-            this.pRpInv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pRpInv.Location = new System.Drawing.Point(0, 75);
+            this.pRpInv.Location = new System.Drawing.Point(0, 336);
             this.pRpInv.Name = "pRpInv";
-            this.pRpInv.Size = new System.Drawing.Size(271, 595);
+            this.pRpInv.Size = new System.Drawing.Size(271, 334);
             this.pRpInv.TabIndex = 3;
             // 
             // label3
@@ -442,10 +444,6 @@ namespace Intelident
             // pRpVentas
             // 
             this.pRpVentas.Controls.Add(this.iconButton12);
-            this.pRpVentas.Controls.Add(this.Label2);
-            this.pRpVentas.Controls.Add(this.dateTimePicker2);
-            this.pRpVentas.Controls.Add(this.Label1);
-            this.pRpVentas.Controls.Add(this.dateTimePicker1);
             this.pRpVentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pRpVentas.Location = new System.Drawing.Point(0, 75);
             this.pRpVentas.Name = "pRpVentas";
@@ -462,49 +460,13 @@ namespace Intelident
             this.iconButton12.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton12.IconColor = System.Drawing.Color.White;
             this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton12.Location = new System.Drawing.Point(80, 180);
+            this.iconButton12.Location = new System.Drawing.Point(38, 150);
             this.iconButton12.Name = "iconButton12";
-            this.iconButton12.Size = new System.Drawing.Size(89, 44);
+            this.iconButton12.Size = new System.Drawing.Size(155, 76);
             this.iconButton12.TabIndex = 5;
-            this.iconButton12.Text = "Generar";
-            this.iconButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton12.Text = "Generar Rp Ventas";
             this.iconButton12.UseVisualStyleBackColor = false;
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.White;
-            this.Label2.Location = new System.Drawing.Point(38, 111);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(97, 19);
-            this.Label2.TabIndex = 3;
-            this.Label2.Text = "Fecha Final";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(35, 144);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(174, 22);
-            this.dateTimePicker2.TabIndex = 2;
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.White;
-            this.Label1.Location = new System.Drawing.Point(38, 44);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(106, 19);
-            this.Label1.TabIndex = 1;
-            this.Label1.Text = "Fecha Inicial";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(35, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(174, 22);
-            this.dateTimePicker1.TabIndex = 0;
+            this.iconButton12.Click += new System.EventHandler(this.iconButton12_Click);
             // 
             // pMargenInf
             // 
@@ -559,6 +521,24 @@ namespace Intelident
             this.reportViewer1.TabStop = false;
             this.reportViewer1.ZoomPercent = 75;
             // 
+            // iconButton20
+            // 
+            this.iconButton20.BackColor = System.Drawing.Color.Navy;
+            this.iconButton20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton20.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton20.ForeColor = System.Drawing.Color.White;
+            this.iconButton20.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton20.IconColor = System.Drawing.Color.White;
+            this.iconButton20.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton20.Location = new System.Drawing.Point(38, 325);
+            this.iconButton20.Name = "iconButton20";
+            this.iconButton20.Size = new System.Drawing.Size(187, 65);
+            this.iconButton20.TabIndex = 13;
+            this.iconButton20.Text = "Generar Reporte General de Maquina";
+            this.iconButton20.UseVisualStyleBackColor = false;
+            this.iconButton20.Click += new System.EventHandler(this.iconButton20_Click);
+            // 
             // bindingSourceinv
             // 
             this.bindingSourceinv.DataMember = "spRpInventario";
@@ -573,10 +553,6 @@ namespace Intelident
             // 
             this.bindingSourceAverias.DataMember = "spMaquinaAveria";
             this.bindingSourceAverias.DataSource = this.bdReportes;
-            // 
-            // spRpInventarioTableAdapter
-            // 
-            this.spRpInventarioTableAdapter.ClearBeforeFill = true;
             // 
             // spMaquinaAveriaTableAdapter
             // 
@@ -600,33 +576,6 @@ namespace Intelident
             // 
             this.spAveriaMaquinaTableAdapter.ClearBeforeFill = true;
             // 
-            // pRpPxM
-            // 
-            this.pRpPxM.Controls.Add(this.iconButton17);
-            this.pRpPxM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pRpPxM.Location = new System.Drawing.Point(0, 75);
-            this.pRpPxM.Name = "pRpPxM";
-            this.pRpPxM.Size = new System.Drawing.Size(271, 595);
-            this.pRpPxM.TabIndex = 5;
-            // 
-            // iconButton17
-            // 
-            this.iconButton17.BackColor = System.Drawing.Color.Navy;
-            this.iconButton17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton17.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton17.ForeColor = System.Drawing.Color.White;
-            this.iconButton17.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton17.IconColor = System.Drawing.Color.White;
-            this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton17.Location = new System.Drawing.Point(35, 124);
-            this.iconButton17.Name = "iconButton17";
-            this.iconButton17.Size = new System.Drawing.Size(187, 65);
-            this.iconButton17.TabIndex = 10;
-            this.iconButton17.Text = "Generar Reporte Pieza x Maquina";
-            this.iconButton17.UseVisualStyleBackColor = false;
-            this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
-            // 
             // bindingSourcePxM
             // 
             this.bindingSourcePxM.DataMember = "spInventarioPiezaMaquina";
@@ -635,6 +584,46 @@ namespace Intelident
             // spInventarioPiezaMaquinaTableAdapter
             // 
             this.spInventarioPiezaMaquinaTableAdapter.ClearBeforeFill = true;
+            // 
+            // spRpInventarioTableAdapter
+            // 
+            this.spRpInventarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingSourceMantenimiento
+            // 
+            this.bindingSourceMantenimiento.DataMember = "spMantenimientoSemanalDetallado";
+            this.bindingSourceMantenimiento.DataSource = this.bdReportes;
+            // 
+            // spMantenimientoSemanalDetalladoTableAdapter
+            // 
+            this.spMantenimientoSemanalDetalladoTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingSourceDMantenimiento
+            // 
+            this.bindingSourceDMantenimiento.DataMember = "spDetallado";
+            this.bindingSourceDMantenimiento.DataSource = this.bdReportes;
+            // 
+            // spDetalladoTableAdapter
+            // 
+            this.spDetalladoTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingSourceGMaquina
+            // 
+            this.bindingSourceGMaquina.DataMember = "spAveriaMaquinaLugar";
+            this.bindingSourceGMaquina.DataSource = this.bdReportes;
+            // 
+            // spAveriaMaquinaLugarTableAdapter
+            // 
+            this.spAveriaMaquinaLugarTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingSourceVentas
+            // 
+            this.bindingSourceVentas.DataMember = "spVentas";
+            this.bindingSourceVentas.DataSource = this.bdReportes;
+            // 
+            // spVentasTableAdapter
+            // 
+            this.spVentasTableAdapter.ClearBeforeFill = true;
             // 
             // RpVentas
             // 
@@ -646,24 +635,28 @@ namespace Intelident
             this.Controls.Add(this.pOpciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RpVentas";
-            this.Text = "Ventas";
+            this.Text = "Reportes";
             this.Load += new System.EventHandler(this.RpVentas_Load);
             this.pOpciones.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pBotones.ResumeLayout(false);
+            this.pMantenimiento.ResumeLayout(false);
+            this.pRpPxM.ResumeLayout(false);
             this.pRPaverias.ResumeLayout(false);
             this.pRpInv.ResumeLayout(false);
             this.pRpInv.PerformLayout();
             this.pRpVentas.ResumeLayout(false);
-            this.pRpVentas.PerformLayout();
             this.pMargenSup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceinv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdReportes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAverias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRDetallado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAComunes)).EndInit();
-            this.pRpPxM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePxM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceMantenimiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDMantenimiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGMaquina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,10 +666,6 @@ namespace Intelident
         private System.Windows.Forms.Panel pOpciones;
         private System.Windows.Forms.Panel pBotones;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton9;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
@@ -685,10 +674,6 @@ namespace Intelident
         private System.Windows.Forms.Panel pMargenInf;
         private System.Windows.Forms.Panel pRpVentas;
         private FontAwesome.Sharp.IconButton iconButton11;
-        private System.Windows.Forms.Label Label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label Label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private FontAwesome.Sharp.IconButton iconButton12;
         private System.Windows.Forms.Panel pRpInv;
         private FontAwesome.Sharp.IconButton iconButton13;
@@ -699,7 +684,6 @@ namespace Intelident
         private System.Windows.Forms.Panel pRPaverias;
         private FontAwesome.Sharp.IconButton iconButton14;
         private System.Windows.Forms.BindingSource bindingSourceinv;
-        private Reportes.BDReportesTableAdapters.spRpInventarioTableAdapter spRpInventarioTableAdapter;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton10;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -714,5 +698,18 @@ namespace Intelident
         private FontAwesome.Sharp.IconButton iconButton17;
         private System.Windows.Forms.BindingSource bindingSourcePxM;
         private Reportes.BDReportesTableAdapters.spInventarioPiezaMaquinaTableAdapter spInventarioPiezaMaquinaTableAdapter;
+        private Reportes.BDReportesTableAdapters.spRpInventarioTableAdapter spRpInventarioTableAdapter;
+        private System.Windows.Forms.Panel pMantenimiento;
+        private FontAwesome.Sharp.IconButton iconButton18;
+        private System.Windows.Forms.BindingSource bindingSourceMantenimiento;
+        private Reportes.BDReportesTableAdapters.spMantenimientoSemanalDetalladoTableAdapter spMantenimientoSemanalDetalladoTableAdapter;
+        private FontAwesome.Sharp.IconButton iconButton19;
+        private System.Windows.Forms.BindingSource bindingSourceDMantenimiento;
+        private Reportes.BDReportesTableAdapters.spDetalladoTableAdapter spDetalladoTableAdapter;
+        private FontAwesome.Sharp.IconButton iconButton20;
+        private System.Windows.Forms.BindingSource bindingSourceGMaquina;
+        private Reportes.BDReportesTableAdapters.spAveriaMaquinaLugarTableAdapter spAveriaMaquinaLugarTableAdapter;
+        private System.Windows.Forms.BindingSource bindingSourceVentas;
+        private Reportes.BDReportesTableAdapters.spVentasTableAdapter spVentasTableAdapter;
     }
 }

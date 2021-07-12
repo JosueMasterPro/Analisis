@@ -36,6 +36,7 @@ namespace Intelident
             pRpVentas.Visible = false;
             pRPaverias.Visible= false;
             pRpPxM.Visible = false;
+            pMantenimiento.Visible = false;
         }
         private string retorno()
         {
@@ -53,8 +54,12 @@ namespace Intelident
 
         private void RpVentas_Load(object sender, EventArgs e)
         {
-            
-
+            // TODO: esta línea de código carga datos en la tabla 'bdReportes.spVentas' Puede moverla o quitarla según sea necesario.
+            this.spVentasTableAdapter.Fill(this.bdReportes.spVentas);
+            // TODO: esta línea de código carga datos en la tabla 'bdReportes.spAveriaMaquinaLugar' Puede moverla o quitarla según sea necesario.
+            this.spAveriaMaquinaLugarTableAdapter.Fill(this.bdReportes.spAveriaMaquinaLugar);
+            // TODO: esta línea de código carga datos en la tabla 'bdReportes.spDetallado' Puede moverla o quitarla según sea necesario.
+            this.spDetalladoTableAdapter.Fill(this.bdReportes.spDetallado);
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -145,6 +150,62 @@ namespace Intelident
         {
             EsconderMenu();
             pRpPxM.Visible = true;
+        }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+           this.Close();
+           
+        }
+
+        private void iconButton18_Click(object sender, EventArgs e)
+        {
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rds = new ReportDataSource("DataSetMDetallado", bindingSourceMantenimiento);
+            this.spMantenimientoSemanalDetalladoTableAdapter.Fill(this.bdReportes.spMantenimientoSemanalDetallado);
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpMDetallado.rdlc";
+            this.reportViewer1.LocalReport.Refresh();
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            EsconderMenu();
+            pMantenimiento.Visible = true;
+        }
+
+        private void iconButton19_Click(object sender, EventArgs e)
+        {
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rds = new ReportDataSource("DataSetDetalladoM", bindingSourceDMantenimiento);
+            this.spDetalladoTableAdapter.Fill(this.bdReportes.spDetallado);
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpEstadodetMaquina.rdlc";
+            this.reportViewer1.LocalReport.Refresh();
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void iconButton20_Click(object sender, EventArgs e)
+        {
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rds = new ReportDataSource("DataSetMaqLugar", bindingSourceGMaquina);
+            this.spAveriaMaquinaLugarTableAdapter.Fill(this.bdReportes.spAveriaMaquinaLugar);
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpEGMaquinas.rdlc";
+            this.reportViewer1.LocalReport.Refresh();
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void iconButton12_Click(object sender, EventArgs e)
+        {
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rds = new ReportDataSource("DataSetVentas", bindingSourceVentas);
+            this.spVentasTableAdapter.Fill(this.bdReportes.spVentas);
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpVentas.rdlc";
+            this.reportViewer1.LocalReport.Refresh();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
