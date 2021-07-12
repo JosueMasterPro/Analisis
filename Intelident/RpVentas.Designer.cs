@@ -71,6 +71,10 @@ namespace Intelident
             this.spAveriaDetalladaTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spAveriaDetalladaTableAdapter();
             this.bindingSourceAComunes = new System.Windows.Forms.BindingSource(this.components);
             this.spAveriaMaquinaTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spAveriaMaquinaTableAdapter();
+            this.pRpPxM = new System.Windows.Forms.Panel();
+            this.iconButton17 = new FontAwesome.Sharp.IconButton();
+            this.bindingSourcePxM = new System.Windows.Forms.BindingSource(this.components);
+            this.spInventarioPiezaMaquinaTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spInventarioPiezaMaquinaTableAdapter();
             this.pOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pBotones.SuspendLayout();
@@ -83,6 +87,8 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAverias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRDetallado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAComunes)).BeginInit();
+            this.pRpPxM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePxM)).BeginInit();
             this.SuspendLayout();
             // 
             // pOpciones
@@ -217,6 +223,7 @@ namespace Intelident
             this.iconButton4.Text = "Reporte de Maquinas";
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton3
             // 
@@ -306,6 +313,7 @@ namespace Intelident
             // pBotones
             // 
             this.pBotones.BackColor = System.Drawing.Color.Blue;
+            this.pBotones.Controls.Add(this.pRpPxM);
             this.pBotones.Controls.Add(this.pRPaverias);
             this.pBotones.Controls.Add(this.pRpInv);
             this.pBotones.Controls.Add(this.pRpVentas);
@@ -592,6 +600,42 @@ namespace Intelident
             // 
             this.spAveriaMaquinaTableAdapter.ClearBeforeFill = true;
             // 
+            // pRpPxM
+            // 
+            this.pRpPxM.Controls.Add(this.iconButton17);
+            this.pRpPxM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pRpPxM.Location = new System.Drawing.Point(0, 75);
+            this.pRpPxM.Name = "pRpPxM";
+            this.pRpPxM.Size = new System.Drawing.Size(271, 595);
+            this.pRpPxM.TabIndex = 5;
+            // 
+            // iconButton17
+            // 
+            this.iconButton17.BackColor = System.Drawing.Color.Navy;
+            this.iconButton17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton17.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton17.ForeColor = System.Drawing.Color.White;
+            this.iconButton17.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton17.IconColor = System.Drawing.Color.White;
+            this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton17.Location = new System.Drawing.Point(35, 124);
+            this.iconButton17.Name = "iconButton17";
+            this.iconButton17.Size = new System.Drawing.Size(187, 65);
+            this.iconButton17.TabIndex = 10;
+            this.iconButton17.Text = "Generar Reporte Pieza x Maquina";
+            this.iconButton17.UseVisualStyleBackColor = false;
+            this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
+            // 
+            // bindingSourcePxM
+            // 
+            this.bindingSourcePxM.DataMember = "spInventarioPiezaMaquina";
+            this.bindingSourcePxM.DataSource = this.bdReportes;
+            // 
+            // spInventarioPiezaMaquinaTableAdapter
+            // 
+            this.spInventarioPiezaMaquinaTableAdapter.ClearBeforeFill = true;
+            // 
             // RpVentas
             // 
             this.BackColor = System.Drawing.Color.Purple;
@@ -618,6 +662,8 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAverias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRDetallado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAComunes)).EndInit();
+            this.pRpPxM.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePxM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,5 +710,9 @@ namespace Intelident
         private System.Windows.Forms.BindingSource bindingSourceAComunes;
         private Reportes.BDReportesTableAdapters.spAveriaMaquinaTableAdapter spAveriaMaquinaTableAdapter;
         private FontAwesome.Sharp.IconButton iconButton16;
+        private System.Windows.Forms.Panel pRpPxM;
+        private FontAwesome.Sharp.IconButton iconButton17;
+        private System.Windows.Forms.BindingSource bindingSourcePxM;
+        private Reportes.BDReportesTableAdapters.spInventarioPiezaMaquinaTableAdapter spInventarioPiezaMaquinaTableAdapter;
     }
 }

@@ -35,6 +35,7 @@ namespace Intelident
             pRpInv.Visible = false;
             pRpVentas.Visible = false;
             pRPaverias.Visible= false;
+            pRpPxM.Visible = false;
         }
         private string retorno()
         {
@@ -52,6 +53,7 @@ namespace Intelident
 
         private void RpVentas_Load(object sender, EventArgs e)
         {
+            
 
         }
 
@@ -126,6 +128,23 @@ namespace Intelident
             this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpAComunes.rdlc";
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
+        }
+
+        private void iconButton17_Click(object sender, EventArgs e)
+        {
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rds = new ReportDataSource("DataSetPxM", bindingSourcePxM);
+            this.spInventarioPiezaMaquinaTableAdapter.Fill(this.bdReportes.spInventarioPiezaMaquina);
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpPxM.rdlc";
+            this.reportViewer1.LocalReport.Refresh();
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            EsconderMenu();
+            pRpPxM.Visible = true;
         }
     }
 }
