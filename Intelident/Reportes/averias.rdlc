@@ -787,7 +787,7 @@
           </Border>
         </Style>
       </Body>
-      <Width>12.31667in</Width>
+      <Width>11.69167in</Width>
       <Page>
         <PageHeader>
           <Height>1.1811in</Height>
@@ -922,7 +922,11 @@
           </Style>
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
-        <PageWidth>11in</PageWidth>
+        <PageWidth>14in</PageWidth>
+        <LeftMargin>0.3937in</LeftMargin>
+        <RightMargin>0.3937in</RightMargin>
+        <TopMargin>0.3937in</TopMargin>
+        <BottomMargin>0.3937in</BottomMargin>
         <ColumnSpacing>0.05118in</ColumnSpacing>
         <Style />
       </Page>

@@ -1625,6 +1625,11 @@
         </Border>
       </Style>
     </PageFooter>
+    <PageHeight>14in</PageHeight>
+    <LeftMargin>0.3937in</LeftMargin>
+    <RightMargin>0.3937in</RightMargin>
+    <TopMargin>0.3937in</TopMargin>
+    <BottomMargin>0.3937in</BottomMargin>
     <ColumnSpacing>0.05118in</ColumnSpacing>
     <Style />
   </Page>
