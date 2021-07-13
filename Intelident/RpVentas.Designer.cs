@@ -41,9 +41,11 @@ namespace Intelident
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.pBotones = new System.Windows.Forms.Panel();
             this.pMantenimiento = new System.Windows.Forms.Panel();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.iconButton19 = new FontAwesome.Sharp.IconButton();
             this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.pRpPxM = new System.Windows.Forms.Panel();
+            this.iconButton20 = new FontAwesome.Sharp.IconButton();
             this.iconButton17 = new FontAwesome.Sharp.IconButton();
             this.pRPaverias = new System.Windows.Forms.Panel();
             this.iconButton16 = new FontAwesome.Sharp.IconButton();
@@ -59,7 +61,6 @@ namespace Intelident
             this.pMargenSup = new System.Windows.Forms.Panel();
             this.iconButton11 = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.iconButton20 = new FontAwesome.Sharp.IconButton();
             this.bindingSourceinv = new System.Windows.Forms.BindingSource(this.components);
             this.bdReportes = new Intelident.Reportes.BDReportes();
             this.bindingSourceAverias = new System.Windows.Forms.BindingSource(this.components);
@@ -79,7 +80,6 @@ namespace Intelident
             this.spAveriaMaquinaLugarTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spAveriaMaquinaLugarTableAdapter();
             this.bindingSourceVentas = new System.Windows.Forms.BindingSource(this.components);
             this.spVentasTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spVentasTableAdapter();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.bindingSourceTecnico = new System.Windows.Forms.BindingSource(this.components);
             this.spMantenimientoTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spMantenimientoTableAdapter();
             this.pOpciones.SuspendLayout();
@@ -274,6 +274,24 @@ namespace Intelident
             this.pMantenimiento.Size = new System.Drawing.Size(271, 595);
             this.pMantenimiento.TabIndex = 6;
             // 
+            // iconButton6
+            // 
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton6.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton6.ForeColor = System.Drawing.Color.White;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton6.IconColor = System.Drawing.Color.White;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.Location = new System.Drawing.Point(38, 326);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(187, 65);
+            this.iconButton6.TabIndex = 13;
+            this.iconButton6.Text = "Generar Reporte Por Tecnico";
+            this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
             // iconButton19
             // 
             this.iconButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -320,6 +338,24 @@ namespace Intelident
             this.pRpPxM.Name = "pRpPxM";
             this.pRpPxM.Size = new System.Drawing.Size(271, 595);
             this.pRpPxM.TabIndex = 5;
+            // 
+            // iconButton20
+            // 
+            this.iconButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton20.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton20.ForeColor = System.Drawing.Color.White;
+            this.iconButton20.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton20.IconColor = System.Drawing.Color.White;
+            this.iconButton20.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton20.Location = new System.Drawing.Point(38, 255);
+            this.iconButton20.Name = "iconButton20";
+            this.iconButton20.Size = new System.Drawing.Size(187, 65);
+            this.iconButton20.TabIndex = 13;
+            this.iconButton20.Text = "Generar Reporte General de Maquina";
+            this.iconButton20.UseVisualStyleBackColor = false;
+            this.iconButton20.Click += new System.EventHandler(this.iconButton20_Click);
             // 
             // iconButton17
             // 
@@ -521,13 +557,13 @@ namespace Intelident
             // 
             // reportViewer1
             // 
-            this.reportViewer1.AutoSize = true;
-            this.reportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.DocumentMapWidth = 394;
+            this.reportViewer1.IsDocumentMapWidthFixed = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Intelident.Reportes.averias.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(542, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
             this.reportViewer1.MinimumSize = new System.Drawing.Size(500, 500);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
@@ -537,24 +573,6 @@ namespace Intelident
             this.reportViewer1.TabIndex = 4;
             this.reportViewer1.TabStop = false;
             this.reportViewer1.ZoomPercent = 75;
-            // 
-            // iconButton20
-            // 
-            this.iconButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton20.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton20.ForeColor = System.Drawing.Color.White;
-            this.iconButton20.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton20.IconColor = System.Drawing.Color.White;
-            this.iconButton20.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton20.Location = new System.Drawing.Point(38, 255);
-            this.iconButton20.Name = "iconButton20";
-            this.iconButton20.Size = new System.Drawing.Size(187, 65);
-            this.iconButton20.TabIndex = 13;
-            this.iconButton20.Text = "Generar Reporte General de Maquina";
-            this.iconButton20.UseVisualStyleBackColor = false;
-            this.iconButton20.Click += new System.EventHandler(this.iconButton20_Click);
             // 
             // bindingSourceinv
             // 
@@ -642,24 +660,6 @@ namespace Intelident
             // 
             this.spVentasTableAdapter.ClearBeforeFill = true;
             // 
-            // iconButton6
-            // 
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(38, 326);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(187, 65);
-            this.iconButton6.TabIndex = 13;
-            this.iconButton6.Text = "Generar Reporte Por Tecnico";
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
-            // 
             // bindingSourceTecnico
             // 
             this.bindingSourceTecnico.DataMember = "spMantenimiento";
@@ -703,7 +703,6 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTecnico)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

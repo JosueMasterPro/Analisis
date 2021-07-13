@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Author>Dokkaebi</Author>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="BDReportes">
@@ -647,6 +648,7 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -901,6 +903,10 @@
                     </ChartAxisScaleBreak>
                   </ChartAxis>
                 </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                  <Rotation>35</Rotation>
+                </ChartThreeDProperties>
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
@@ -979,7 +985,7 @@
           </Border>
         </Style>
       </Body>
-      <Width>28.40332cm</Width>
+      <Width>36.74299cm</Width>
       <Page>
         <PageHeader>
           <Height>3cm</Height>
@@ -1113,14 +1119,21 @@
             </Border>
           </Style>
         </PageFooter>
-        <PageHeight>22cm</PageHeight>
-        <PageWidth>28cm</PageWidth>
+        <PageHeight>8.5in</PageHeight>
+        <PageWidth>11in</PageWidth>
+        <InteractiveHeight>8.5in</InteractiveHeight>
+        <InteractiveWidth>11in</InteractiveWidth>
         <LeftMargin>0cm</LeftMargin>
         <RightMargin>0cm</RightMargin>
         <TopMargin>0cm</TopMargin>
         <BottomMargin>0cm</BottomMargin>
-        <ColumnSpacing>0.13cm</ColumnSpacing>
-        <Style />
+        <ColumnSpacing>0.15cm</ColumnSpacing>
+        <Style>
+          <Border>
+            <Color>Red</Color>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
       </Page>
     </ReportSection>
   </ReportSections>
@@ -1177,6 +1190,8 @@ tPruGAgAAHCJvFMP3WUhvPTlMRIAAODyOFrpj0ccfV3fHkMBAAAujbNWOnn8aKNv6NtjLAAAwCXx5dnz
 k3R3L1977uqTD8bDSd/i+CEAAAD3wj+uPXsrkh47guNBdvwgAACAn+PFa09f/fOVB2j9hu91/DAAAIAf7x/Xrl27evVPVx45AuMiOX4iAADAD3Irj/529eqTV6480A8k/QDH7wUAADjv+VtRdLh65o9XLuQFpLv73e/+HyL7bmULPGydAAAAAElFTkSuQmCC</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataElementStyle>Element</DataElementStyle>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>1742f18c-ef45-422a-a669-4d59304aad5f</rd:ReportID>
 </Report>

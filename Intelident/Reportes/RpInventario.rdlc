@@ -585,8 +585,8 @@
                 <Value>=Fields!Cantidad.Value</Value>
               </SortExpression>
             </SortExpressions>
-            <Top>3.0489in</Top>
-            <Left>0.58919in</Left>
+            <Top>3.2989in</Top>
+            <Left>0.74522in</Left>
             <Height>0.5in</Height>
             <Width>9.71944in</Width>
             <Style>
@@ -944,7 +944,7 @@
             <Top>0.23223in</Top>
             <Left>1.20867in</Left>
             <Height>2.625in</Height>
-            <Width>8.12633in</Width>
+            <Width>8.60966in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -956,7 +956,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>7in</Height>
+        <Height>5.85in</Height>
         <Style>
           <Border>
             <Style>None</Style>

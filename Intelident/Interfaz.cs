@@ -316,7 +316,7 @@ namespace Intelident
 
         private void iconPictureBox4_Click(object sender, EventArgs e)
         {
-            DesactivarBoton();
+            Reset();
             PanelMenu.Visible = true;
         }
 

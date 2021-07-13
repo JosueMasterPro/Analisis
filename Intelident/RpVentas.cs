@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Odbc;
+using System.IO;
 
 namespace Intelident
 {
@@ -54,14 +55,6 @@ namespace Intelident
 
         private void RpVentas_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bdReportes.spMantenimiento' Puede moverla o quitarla según sea necesario.
-            this.spMantenimientoTableAdapter.Fill(this.bdReportes.spMantenimiento);
-            // TODO: esta línea de código carga datos en la tabla 'bdReportes.spVentas' Puede moverla o quitarla según sea necesario.
-            this.spVentasTableAdapter.Fill(this.bdReportes.spVentas);
-            // TODO: esta línea de código carga datos en la tabla 'bdReportes.spAveriaMaquinaLugar' Puede moverla o quitarla según sea necesario.
-            this.spAveriaMaquinaLugarTableAdapter.Fill(this.bdReportes.spAveriaMaquinaLugar);
-            // TODO: esta línea de código carga datos en la tabla 'bdReportes.spDetallado' Puede moverla o quitarla según sea necesario.
-            this.spDetalladoTableAdapter.Fill(this.bdReportes.spDetallado);
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -99,7 +92,7 @@ namespace Intelident
 
         private void iconButton14_Click(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bdReportes1.Averia' Puede moverla o quitarla según sea necesario.
+            
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.spMaquinaAveriaTableAdapter.Fill(this.bdReportes.spMaquinaAveria);
             ReportDataSource rds = new ReportDataSource("DataSetAverias", bindingSourceAverias);
@@ -201,11 +194,13 @@ namespace Intelident
 
         private void iconButton12_Click(object sender, EventArgs e)
         {
+            //Reprote de ventas
+            string relativpath = "../../Reportes/RpVentas.rdlc";
             this.reportViewer1.LocalReport.DataSources.Clear();
             ReportDataSource rds = new ReportDataSource("DataSetVentas", bindingSourceVentas);
             this.spVentasTableAdapter.Fill(this.bdReportes.spVentas);
             this.reportViewer1.LocalReport.DataSources.Add(rds);
-            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpVentas.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = Path.GetFullPath(relativpath);
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
@@ -213,10 +208,11 @@ namespace Intelident
         private void iconButton6_Click(object sender, EventArgs e)
         {
             this.reportViewer1.LocalReport.DataSources.Clear();
+            string relativpath = "../../Reportes/RpMporTecnico.rdlc";
             ReportDataSource rds = new ReportDataSource("DataSetMporTec", bindingSourceTecnico);
             this.spMantenimientoTableAdapter.Fill(this.bdReportes.spMantenimiento);
             this.reportViewer1.LocalReport.DataSources.Add(rds);
-            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Josue Reyes\\source\\repos\\JosueMasterPro\\Analisis\\Intelident\\Reportes\\RpMporTecnico.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = this.reportViewer1.LocalReport.ReportPath = Path.GetFullPath(relativpath);
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
