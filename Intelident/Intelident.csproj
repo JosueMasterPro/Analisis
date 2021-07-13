@@ -155,6 +155,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\averias.rdlc" />
+    <EmbeddedResource Include="Reportes\RpMporTecnico.rdlc" />
     <EmbeddedResource Include="Reportes\RpVentas.rdlc" />
     <EmbeddedResource Include="Reportes\RpEGMaquinas.rdlc" />
     <EmbeddedResource Include="Reportes\RpEstadoDetMaquina.rdlc" />

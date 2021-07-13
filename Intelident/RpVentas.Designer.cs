@@ -79,6 +79,9 @@ namespace Intelident
             this.spAveriaMaquinaLugarTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spAveriaMaquinaLugarTableAdapter();
             this.bindingSourceVentas = new System.Windows.Forms.BindingSource(this.components);
             this.spVentasTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spVentasTableAdapter();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.bindingSourceTecnico = new System.Windows.Forms.BindingSource(this.components);
+            this.spMantenimientoTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spMantenimientoTableAdapter();
             this.pOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pBotones.SuspendLayout();
@@ -98,11 +101,12 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDMantenimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGMaquina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTecnico)).BeginInit();
             this.SuspendLayout();
             // 
             // pOpciones
             // 
-            this.pOpciones.BackColor = System.Drawing.Color.Blue;
+            this.pOpciones.BackColor = System.Drawing.Color.Red;
             this.pOpciones.Controls.Add(this.iconButton5);
             this.pOpciones.Controls.Add(this.iconButton4);
             this.pOpciones.Controls.Add(this.iconButton3);
@@ -117,7 +121,7 @@ namespace Intelident
             // 
             // iconButton5
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.Navy;
+            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -137,7 +141,7 @@ namespace Intelident
             // 
             // iconButton4
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.Navy;
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -157,7 +161,7 @@ namespace Intelident
             // 
             // iconButton3
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.Navy;
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -177,7 +181,7 @@ namespace Intelident
             // 
             // iconButton2
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.Navy;
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -197,7 +201,7 @@ namespace Intelident
             // 
             // iconButton1
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Navy;
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -217,6 +221,7 @@ namespace Intelident
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.iconButton10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -226,7 +231,7 @@ namespace Intelident
             // 
             // iconButton10
             // 
-            this.iconButton10.BackColor = System.Drawing.Color.Blue;
+            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton10.Dock = System.Windows.Forms.DockStyle.Left;
             this.iconButton10.ForeColor = System.Drawing.Color.White;
             this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
@@ -243,7 +248,7 @@ namespace Intelident
             // 
             // pBotones
             // 
-            this.pBotones.BackColor = System.Drawing.Color.Blue;
+            this.pBotones.BackColor = System.Drawing.Color.Red;
             this.pBotones.Controls.Add(this.pMantenimiento);
             this.pBotones.Controls.Add(this.pRpPxM);
             this.pBotones.Controls.Add(this.pRPaverias);
@@ -259,17 +264,19 @@ namespace Intelident
             // 
             // pMantenimiento
             // 
-            this.pMantenimiento.Controls.Add(this.iconButton20);
+            this.pMantenimiento.BackColor = System.Drawing.Color.Red;
+            this.pMantenimiento.Controls.Add(this.iconButton6);
             this.pMantenimiento.Controls.Add(this.iconButton19);
             this.pMantenimiento.Controls.Add(this.iconButton18);
-            this.pMantenimiento.Location = new System.Drawing.Point(0, 415);
+            this.pMantenimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pMantenimiento.Location = new System.Drawing.Point(0, 75);
             this.pMantenimiento.Name = "pMantenimiento";
-            this.pMantenimiento.Size = new System.Drawing.Size(271, 255);
+            this.pMantenimiento.Size = new System.Drawing.Size(271, 595);
             this.pMantenimiento.TabIndex = 6;
             // 
             // iconButton19
             // 
-            this.iconButton19.BackColor = System.Drawing.Color.Navy;
+            this.iconButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton19.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -287,7 +294,7 @@ namespace Intelident
             // 
             // iconButton18
             // 
-            this.iconButton18.BackColor = System.Drawing.Color.Navy;
+            this.iconButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton18.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -305,15 +312,18 @@ namespace Intelident
             // 
             // pRpPxM
             // 
+            this.pRpPxM.BackColor = System.Drawing.Color.Red;
+            this.pRpPxM.Controls.Add(this.iconButton20);
             this.pRpPxM.Controls.Add(this.iconButton17);
-            this.pRpPxM.Location = new System.Drawing.Point(0, 395);
+            this.pRpPxM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pRpPxM.Location = new System.Drawing.Point(0, 75);
             this.pRpPxM.Name = "pRpPxM";
-            this.pRpPxM.Size = new System.Drawing.Size(271, 275);
+            this.pRpPxM.Size = new System.Drawing.Size(271, 595);
             this.pRpPxM.TabIndex = 5;
             // 
             // iconButton17
             // 
-            this.iconButton17.BackColor = System.Drawing.Color.Navy;
+            this.iconButton17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton17.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -331,17 +341,19 @@ namespace Intelident
             // 
             // pRPaverias
             // 
+            this.pRPaverias.BackColor = System.Drawing.Color.Red;
             this.pRPaverias.Controls.Add(this.iconButton16);
             this.pRPaverias.Controls.Add(this.iconButton15);
             this.pRPaverias.Controls.Add(this.iconButton14);
-            this.pRPaverias.Location = new System.Drawing.Point(0, 375);
+            this.pRPaverias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pRPaverias.Location = new System.Drawing.Point(0, 75);
             this.pRPaverias.Name = "pRPaverias";
-            this.pRPaverias.Size = new System.Drawing.Size(271, 295);
+            this.pRPaverias.Size = new System.Drawing.Size(271, 595);
             this.pRPaverias.TabIndex = 4;
             // 
             // iconButton16
             // 
-            this.iconButton16.BackColor = System.Drawing.Color.Navy;
+            this.iconButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton16.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -349,7 +361,7 @@ namespace Intelident
             this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton16.IconColor = System.Drawing.Color.White;
             this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton16.Location = new System.Drawing.Point(23, 300);
+            this.iconButton16.Location = new System.Drawing.Point(38, 299);
             this.iconButton16.Name = "iconButton16";
             this.iconButton16.Size = new System.Drawing.Size(187, 65);
             this.iconButton16.TabIndex = 9;
@@ -359,7 +371,7 @@ namespace Intelident
             // 
             // iconButton15
             // 
-            this.iconButton15.BackColor = System.Drawing.Color.Navy;
+            this.iconButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton15.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -367,7 +379,7 @@ namespace Intelident
             this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton15.IconColor = System.Drawing.Color.White;
             this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton15.Location = new System.Drawing.Point(23, 208);
+            this.iconButton15.Location = new System.Drawing.Point(38, 207);
             this.iconButton15.Name = "iconButton15";
             this.iconButton15.Size = new System.Drawing.Size(187, 65);
             this.iconButton15.TabIndex = 8;
@@ -377,7 +389,7 @@ namespace Intelident
             // 
             // iconButton14
             // 
-            this.iconButton14.BackColor = System.Drawing.Color.Navy;
+            this.iconButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton14.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -385,7 +397,7 @@ namespace Intelident
             this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton14.IconColor = System.Drawing.Color.White;
             this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton14.Location = new System.Drawing.Point(23, 144);
+            this.iconButton14.Location = new System.Drawing.Point(38, 143);
             this.iconButton14.Name = "iconButton14";
             this.iconButton14.Size = new System.Drawing.Size(187, 44);
             this.iconButton14.TabIndex = 7;
@@ -396,12 +408,14 @@ namespace Intelident
             // 
             // pRpInv
             // 
+            this.pRpInv.BackColor = System.Drawing.Color.Red;
             this.pRpInv.Controls.Add(this.label3);
             this.pRpInv.Controls.Add(this.textBox1);
             this.pRpInv.Controls.Add(this.iconButton13);
-            this.pRpInv.Location = new System.Drawing.Point(0, 336);
+            this.pRpInv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pRpInv.Location = new System.Drawing.Point(0, 75);
             this.pRpInv.Name = "pRpInv";
-            this.pRpInv.Size = new System.Drawing.Size(271, 334);
+            this.pRpInv.Size = new System.Drawing.Size(271, 595);
             this.pRpInv.TabIndex = 3;
             // 
             // label3
@@ -424,7 +438,7 @@ namespace Intelident
             // 
             // iconButton13
             // 
-            this.iconButton13.BackColor = System.Drawing.Color.Navy;
+            this.iconButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton13.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -443,6 +457,7 @@ namespace Intelident
             // 
             // pRpVentas
             // 
+            this.pRpVentas.BackColor = System.Drawing.Color.Red;
             this.pRpVentas.Controls.Add(this.iconButton12);
             this.pRpVentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pRpVentas.Location = new System.Drawing.Point(0, 75);
@@ -452,7 +467,7 @@ namespace Intelident
             // 
             // iconButton12
             // 
-            this.iconButton12.BackColor = System.Drawing.Color.Navy;
+            this.iconButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton12.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -460,7 +475,7 @@ namespace Intelident
             this.iconButton12.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton12.IconColor = System.Drawing.Color.White;
             this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton12.Location = new System.Drawing.Point(38, 150);
+            this.iconButton12.Location = new System.Drawing.Point(55, 134);
             this.iconButton12.Name = "iconButton12";
             this.iconButton12.Size = new System.Drawing.Size(155, 76);
             this.iconButton12.TabIndex = 5;
@@ -470,6 +485,7 @@ namespace Intelident
             // 
             // pMargenInf
             // 
+            this.pMargenInf.BackColor = System.Drawing.Color.Red;
             this.pMargenInf.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pMargenInf.Location = new System.Drawing.Point(0, 670);
             this.pMargenInf.Name = "pMargenInf";
@@ -478,6 +494,7 @@ namespace Intelident
             // 
             // pMargenSup
             // 
+            this.pMargenSup.BackColor = System.Drawing.Color.Red;
             this.pMargenSup.Controls.Add(this.iconButton11);
             this.pMargenSup.Dock = System.Windows.Forms.DockStyle.Top;
             this.pMargenSup.Location = new System.Drawing.Point(0, 0);
@@ -487,7 +504,7 @@ namespace Intelident
             // 
             // iconButton11
             // 
-            this.iconButton11.BackColor = System.Drawing.Color.Blue;
+            this.iconButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton11.Dock = System.Windows.Forms.DockStyle.Left;
             this.iconButton11.ForeColor = System.Drawing.Color.White;
             this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
@@ -523,7 +540,7 @@ namespace Intelident
             // 
             // iconButton20
             // 
-            this.iconButton20.BackColor = System.Drawing.Color.Navy;
+            this.iconButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton20.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -531,7 +548,7 @@ namespace Intelident
             this.iconButton20.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton20.IconColor = System.Drawing.Color.White;
             this.iconButton20.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton20.Location = new System.Drawing.Point(38, 325);
+            this.iconButton20.Location = new System.Drawing.Point(38, 255);
             this.iconButton20.Name = "iconButton20";
             this.iconButton20.Size = new System.Drawing.Size(187, 65);
             this.iconButton20.TabIndex = 13;
@@ -625,6 +642,33 @@ namespace Intelident
             // 
             this.spVentasTableAdapter.ClearBeforeFill = true;
             // 
+            // iconButton6
+            // 
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton6.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton6.ForeColor = System.Drawing.Color.White;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton6.IconColor = System.Drawing.Color.White;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.Location = new System.Drawing.Point(38, 326);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(187, 65);
+            this.iconButton6.TabIndex = 13;
+            this.iconButton6.Text = "Generar Reporte Por Tecnico";
+            this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
+            // bindingSourceTecnico
+            // 
+            this.bindingSourceTecnico.DataMember = "spMantenimiento";
+            this.bindingSourceTecnico.DataSource = this.bdReportes;
+            // 
+            // spMantenimientoTableAdapter
+            // 
+            this.spMantenimientoTableAdapter.ClearBeforeFill = true;
+            // 
             // RpVentas
             // 
             this.BackColor = System.Drawing.Color.Purple;
@@ -657,6 +701,7 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDMantenimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGMaquina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTecnico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -711,5 +756,8 @@ namespace Intelident
         private Reportes.BDReportesTableAdapters.spAveriaMaquinaLugarTableAdapter spAveriaMaquinaLugarTableAdapter;
         private System.Windows.Forms.BindingSource bindingSourceVentas;
         private Reportes.BDReportesTableAdapters.spVentasTableAdapter spVentasTableAdapter;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private System.Windows.Forms.BindingSource bindingSourceTecnico;
+        private Reportes.BDReportesTableAdapters.spMantenimientoTableAdapter spMantenimientoTableAdapter;
     }
 }
