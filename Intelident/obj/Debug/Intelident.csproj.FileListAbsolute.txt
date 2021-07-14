@@ -170,7 +170,8 @@ C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\R
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Reportes\BDReportes.xsc
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Reportes\BDReportes.xsd
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Reportes\BDReportes.xss
-C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.AssemblyReference.cache
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\RdlCompile.cache
 C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\RdlCompile.compiled
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Prueba.resources
+C:\Users\Josue Reyes\source\repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Bunifu_UI_v1.5.3.dll

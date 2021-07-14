@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
-using FontAwesome.Sharp;
 
 namespace Intelident
 {
@@ -18,8 +17,6 @@ namespace Intelident
 
 
 
-        private IconButton currentBtn;
-        private Panel leftBorderBtn;
         private Form FormActual;
         public Login()
         {
@@ -146,6 +143,46 @@ namespace Intelident
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            /*Conectar();
+
+           SqlDataAdapter da = new SqlDataAdapter("SELECT COUNT(*) FROM ALogin WHERE Usuario='" + textBox1.Text + "'AND PWDCOMPARE('"+ textBox2.Text+"',contrasena)=1", Conectar());
+           DataTable dt = new DataTable();
+           da.Fill(dt);
+
+           if (dt.Rows[0][0].ToString() == "1")
+           {
+               SqlCommand Comando = new SqlCommand("Select * from Alogin where Usuario=@Usuario",Conectar());
+               Comando.Parameters.AddWithValue("@Usuario", textBox1.Text);
+               SqlDataReader registro = Comando.ExecuteReader();
+
+               if (registro.Read())
+               {
+                   Nombre = registro["Nombre"].ToString();
+                   Apellido = registro["Apellido"].ToString();
+                   Celular = registro["Celular"].ToString();
+                   Correo = registro["Correo"].ToString();
+               }
+               userName = textBox1.Text;
+               this.Hide();
+               new Interfaz(userName,Nombre,Apellido,Celular,Correo).Show();
+           }
+           else
+           {
+               textBox1.Text = "";
+               textBox2.Text = "";
+               label3.Text = "Usuario o Contraseña Incorrecto";
+           }*/
+            this.Hide();
+            new Interfaz().Show();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
     

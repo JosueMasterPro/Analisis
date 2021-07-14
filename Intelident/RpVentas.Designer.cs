@@ -32,35 +32,34 @@ namespace Intelident
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RpVentas));
             this.pOpciones = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.BtnRpManteniminto = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnRpMaquina = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnRpAverias = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnRpInv = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnRpVenta = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton10 = new FontAwesome.Sharp.IconButton();
+            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pBotones = new System.Windows.Forms.Panel();
             this.pMantenimiento = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton19 = new FontAwesome.Sharp.IconButton();
-            this.iconButton18 = new FontAwesome.Sharp.IconButton();
+            this.bunifuFlatButton16 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton15 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton11 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pRpPxM = new System.Windows.Forms.Panel();
-            this.iconButton20 = new FontAwesome.Sharp.IconButton();
-            this.iconButton17 = new FontAwesome.Sharp.IconButton();
+            this.bunifuFlatButton14 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pRPaverias = new System.Windows.Forms.Panel();
-            this.iconButton16 = new FontAwesome.Sharp.IconButton();
-            this.iconButton15 = new FontAwesome.Sharp.IconButton();
-            this.iconButton14 = new FontAwesome.Sharp.IconButton();
+            this.bunifuFlatButton13 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton12 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pRpInv = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.pRpVentas = new System.Windows.Forms.Panel();
-            this.iconButton12 = new FontAwesome.Sharp.IconButton();
+            this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pMargenInf = new System.Windows.Forms.Panel();
             this.pMargenSup = new System.Windows.Forms.Panel();
-            this.iconButton11 = new FontAwesome.Sharp.IconButton();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bindingSourceinv = new System.Windows.Forms.BindingSource(this.components);
             this.bdReportes = new Intelident.Reportes.BDReportes();
             this.bindingSourceAverias = new System.Windows.Forms.BindingSource(this.components);
@@ -82,6 +81,7 @@ namespace Intelident
             this.spVentasTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spVentasTableAdapter();
             this.bindingSourceTecnico = new System.Windows.Forms.BindingSource(this.components);
             this.spMantenimientoTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spMantenimientoTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pBotones.SuspendLayout();
@@ -106,145 +106,254 @@ namespace Intelident
             // 
             // pOpciones
             // 
-            this.pOpciones.BackColor = System.Drawing.Color.Red;
-            this.pOpciones.Controls.Add(this.iconButton5);
-            this.pOpciones.Controls.Add(this.iconButton4);
-            this.pOpciones.Controls.Add(this.iconButton3);
-            this.pOpciones.Controls.Add(this.iconButton2);
-            this.pOpciones.Controls.Add(this.iconButton1);
+            this.pOpciones.BackColor = System.Drawing.Color.Teal;
+            this.pOpciones.Controls.Add(this.BtnRpManteniminto);
+            this.pOpciones.Controls.Add(this.BtnRpMaquina);
+            this.pOpciones.Controls.Add(this.BtnRpAverias);
+            this.pOpciones.Controls.Add(this.BtnRpInv);
+            this.pOpciones.Controls.Add(this.BtnRpVenta);
             this.pOpciones.Controls.Add(this.panel1);
             this.pOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pOpciones.Location = new System.Drawing.Point(0, 0);
             this.pOpciones.Name = "pOpciones";
-            this.pOpciones.Size = new System.Drawing.Size(271, 807);
+            this.pOpciones.Size = new System.Drawing.Size(327, 807);
             this.pOpciones.TabIndex = 1;
             // 
-            // iconButton5
+            // BtnRpManteniminto
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(0, 415);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(271, 85);
-            this.iconButton5.TabIndex = 8;
-            this.iconButton5.Text = "Reporte de Mantenimiento";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            this.BtnRpManteniminto.Activecolor = System.Drawing.Color.Blue;
+            this.BtnRpManteniminto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpManteniminto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnRpManteniminto.BorderRadius = 0;
+            this.BtnRpManteniminto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnRpManteniminto.ButtonText = "Reporte de Mantenimiento";
+            this.BtnRpManteniminto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRpManteniminto.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnRpManteniminto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRpManteniminto.Iconcolor = System.Drawing.Color.Transparent;
+            this.BtnRpManteniminto.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnRpManteniminto.Iconimage")));
+            this.BtnRpManteniminto.Iconimage_right = null;
+            this.BtnRpManteniminto.Iconimage_right_Selected = null;
+            this.BtnRpManteniminto.Iconimage_Selected = null;
+            this.BtnRpManteniminto.IconMarginLeft = 15;
+            this.BtnRpManteniminto.IconMarginRight = 0;
+            this.BtnRpManteniminto.IconRightVisible = true;
+            this.BtnRpManteniminto.IconRightZoom = 0D;
+            this.BtnRpManteniminto.IconVisible = true;
+            this.BtnRpManteniminto.IconZoom = 80D;
+            this.BtnRpManteniminto.IsTab = false;
+            this.BtnRpManteniminto.Location = new System.Drawing.Point(0, 356);
+            this.BtnRpManteniminto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnRpManteniminto.Name = "BtnRpManteniminto";
+            this.BtnRpManteniminto.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpManteniminto.OnHovercolor = System.Drawing.Color.Blue;
+            this.BtnRpManteniminto.OnHoverTextColor = System.Drawing.Color.White;
+            this.BtnRpManteniminto.selected = false;
+            this.BtnRpManteniminto.Size = new System.Drawing.Size(327, 71);
+            this.BtnRpManteniminto.TabIndex = 17;
+            this.BtnRpManteniminto.Text = "Reporte de Mantenimiento";
+            this.BtnRpManteniminto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRpManteniminto.Textcolor = System.Drawing.Color.Black;
+            this.BtnRpManteniminto.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRpManteniminto.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
-            // iconButton4
+            // BtnRpMaquina
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(0, 330);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(271, 85);
-            this.iconButton4.TabIndex = 7;
-            this.iconButton4.Text = "Reporte de Maquinas";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.BtnRpMaquina.Activecolor = System.Drawing.Color.Blue;
+            this.BtnRpMaquina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpMaquina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnRpMaquina.BorderRadius = 0;
+            this.BtnRpMaquina.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnRpMaquina.ButtonText = "Reporte de Maquinas";
+            this.BtnRpMaquina.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRpMaquina.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnRpMaquina.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRpMaquina.Iconcolor = System.Drawing.Color.Transparent;
+            this.BtnRpMaquina.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnRpMaquina.Iconimage")));
+            this.BtnRpMaquina.Iconimage_right = null;
+            this.BtnRpMaquina.Iconimage_right_Selected = null;
+            this.BtnRpMaquina.Iconimage_Selected = null;
+            this.BtnRpMaquina.IconMarginLeft = 15;
+            this.BtnRpMaquina.IconMarginRight = 0;
+            this.BtnRpMaquina.IconRightVisible = true;
+            this.BtnRpMaquina.IconRightZoom = 0D;
+            this.BtnRpMaquina.IconVisible = true;
+            this.BtnRpMaquina.IconZoom = 80D;
+            this.BtnRpMaquina.IsTab = false;
+            this.BtnRpMaquina.Location = new System.Drawing.Point(0, 285);
+            this.BtnRpMaquina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnRpMaquina.Name = "BtnRpMaquina";
+            this.BtnRpMaquina.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpMaquina.OnHovercolor = System.Drawing.Color.Blue;
+            this.BtnRpMaquina.OnHoverTextColor = System.Drawing.Color.White;
+            this.BtnRpMaquina.selected = false;
+            this.BtnRpMaquina.Size = new System.Drawing.Size(327, 71);
+            this.BtnRpMaquina.TabIndex = 16;
+            this.BtnRpMaquina.Text = "Reporte de Maquinas";
+            this.BtnRpMaquina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRpMaquina.Textcolor = System.Drawing.Color.Black;
+            this.BtnRpMaquina.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRpMaquina.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
-            // iconButton3
+            // BtnRpAverias
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(0, 245);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(271, 85);
-            this.iconButton3.TabIndex = 6;
-            this.iconButton3.Text = "Reporte de Averias";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.BtnRpAverias.Activecolor = System.Drawing.Color.Blue;
+            this.BtnRpAverias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpAverias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnRpAverias.BorderRadius = 0;
+            this.BtnRpAverias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnRpAverias.ButtonText = "Reporte de Averias";
+            this.BtnRpAverias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRpAverias.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnRpAverias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRpAverias.Iconcolor = System.Drawing.Color.Transparent;
+            this.BtnRpAverias.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnRpAverias.Iconimage")));
+            this.BtnRpAverias.Iconimage_right = null;
+            this.BtnRpAverias.Iconimage_right_Selected = null;
+            this.BtnRpAverias.Iconimage_Selected = null;
+            this.BtnRpAverias.IconMarginLeft = 15;
+            this.BtnRpAverias.IconMarginRight = 0;
+            this.BtnRpAverias.IconRightVisible = true;
+            this.BtnRpAverias.IconRightZoom = 0D;
+            this.BtnRpAverias.IconVisible = true;
+            this.BtnRpAverias.IconZoom = 80D;
+            this.BtnRpAverias.IsTab = false;
+            this.BtnRpAverias.Location = new System.Drawing.Point(0, 214);
+            this.BtnRpAverias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnRpAverias.Name = "BtnRpAverias";
+            this.BtnRpAverias.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpAverias.OnHovercolor = System.Drawing.Color.Blue;
+            this.BtnRpAverias.OnHoverTextColor = System.Drawing.Color.White;
+            this.BtnRpAverias.selected = false;
+            this.BtnRpAverias.Size = new System.Drawing.Size(327, 71);
+            this.BtnRpAverias.TabIndex = 15;
+            this.BtnRpAverias.Text = "Reporte de Averias";
+            this.BtnRpAverias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRpAverias.Textcolor = System.Drawing.Color.Black;
+            this.BtnRpAverias.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRpAverias.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // iconButton2
+            // BtnRpInv
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(0, 160);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(271, 85);
-            this.iconButton2.TabIndex = 5;
-            this.iconButton2.Text = "Reporte de Inventario";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.BtnRpInv.Activecolor = System.Drawing.Color.Blue;
+            this.BtnRpInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnRpInv.BorderRadius = 0;
+            this.BtnRpInv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnRpInv.ButtonText = "Reporte de Inventario";
+            this.BtnRpInv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRpInv.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnRpInv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRpInv.Iconcolor = System.Drawing.Color.Transparent;
+            this.BtnRpInv.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnRpInv.Iconimage")));
+            this.BtnRpInv.Iconimage_right = null;
+            this.BtnRpInv.Iconimage_right_Selected = null;
+            this.BtnRpInv.Iconimage_Selected = null;
+            this.BtnRpInv.IconMarginLeft = 15;
+            this.BtnRpInv.IconMarginRight = 0;
+            this.BtnRpInv.IconRightVisible = true;
+            this.BtnRpInv.IconRightZoom = 0D;
+            this.BtnRpInv.IconVisible = true;
+            this.BtnRpInv.IconZoom = 80D;
+            this.BtnRpInv.IsTab = false;
+            this.BtnRpInv.Location = new System.Drawing.Point(0, 143);
+            this.BtnRpInv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnRpInv.Name = "BtnRpInv";
+            this.BtnRpInv.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpInv.OnHovercolor = System.Drawing.Color.Blue;
+            this.BtnRpInv.OnHoverTextColor = System.Drawing.Color.White;
+            this.BtnRpInv.selected = false;
+            this.BtnRpInv.Size = new System.Drawing.Size(327, 71);
+            this.BtnRpInv.TabIndex = 14;
+            this.BtnRpInv.Text = "Reporte de Inventario";
+            this.BtnRpInv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRpInv.Textcolor = System.Drawing.Color.Black;
+            this.BtnRpInv.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRpInv.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // iconButton1
+            // BtnRpVenta
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(0, 75);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(271, 85);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.Text = "Reporte de Ventas";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.BtnRpVenta.Activecolor = System.Drawing.Color.Blue;
+            this.BtnRpVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnRpVenta.BorderRadius = 0;
+            this.BtnRpVenta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnRpVenta.ButtonText = "Reporte de Ventas";
+            this.BtnRpVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRpVenta.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnRpVenta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRpVenta.Iconcolor = System.Drawing.Color.Transparent;
+            this.BtnRpVenta.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnRpVenta.Iconimage")));
+            this.BtnRpVenta.Iconimage_right = null;
+            this.BtnRpVenta.Iconimage_right_Selected = null;
+            this.BtnRpVenta.Iconimage_Selected = null;
+            this.BtnRpVenta.IconMarginLeft = 15;
+            this.BtnRpVenta.IconMarginRight = 0;
+            this.BtnRpVenta.IconRightVisible = true;
+            this.BtnRpVenta.IconRightZoom = 0D;
+            this.BtnRpVenta.IconVisible = true;
+            this.BtnRpVenta.IconZoom = 80D;
+            this.BtnRpVenta.IsTab = false;
+            this.BtnRpVenta.Location = new System.Drawing.Point(0, 72);
+            this.BtnRpVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnRpVenta.Name = "BtnRpVenta";
+            this.BtnRpVenta.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRpVenta.OnHovercolor = System.Drawing.Color.Blue;
+            this.BtnRpVenta.OnHoverTextColor = System.Drawing.Color.White;
+            this.BtnRpVenta.selected = false;
+            this.BtnRpVenta.Size = new System.Drawing.Size(327, 71);
+            this.BtnRpVenta.TabIndex = 2;
+            this.BtnRpVenta.Text = "Reporte de Ventas";
+            this.BtnRpVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRpVenta.Textcolor = System.Drawing.Color.Black;
+            this.BtnRpVenta.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRpVenta.Click += new System.EventHandler(this.BtnBasedeDatos_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Controls.Add(this.iconButton10);
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.bunifuFlatButton5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(271, 75);
+            this.panel1.Size = new System.Drawing.Size(327, 72);
             this.panel1.TabIndex = 13;
             // 
-            // iconButton10
+            // bunifuFlatButton5
             // 
-            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton10.ForeColor = System.Drawing.Color.White;
-            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.iconButton10.IconColor = System.Drawing.Color.White;
-            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton10.IconSize = 70;
-            this.iconButton10.Location = new System.Drawing.Point(0, 0);
-            this.iconButton10.Name = "iconButton10";
-            this.iconButton10.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.iconButton10.Size = new System.Drawing.Size(73, 75);
-            this.iconButton10.TabIndex = 0;
-            this.iconButton10.UseVisualStyleBackColor = false;
-            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton5.BorderRadius = 0;
+            this.bunifuFlatButton5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton5.ButtonText = "";
+            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
+            this.bunifuFlatButton5.Iconimage_right = null;
+            this.bunifuFlatButton5.Iconimage_right_Selected = null;
+            this.bunifuFlatButton5.Iconimage_Selected = null;
+            this.bunifuFlatButton5.IconMarginLeft = 12;
+            this.bunifuFlatButton5.IconMarginRight = 0;
+            this.bunifuFlatButton5.IconRightVisible = true;
+            this.bunifuFlatButton5.IconRightZoom = 0D;
+            this.bunifuFlatButton5.IconVisible = true;
+            this.bunifuFlatButton5.IconZoom = 100D;
+            this.bunifuFlatButton5.IsTab = false;
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
+            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton5.selected = false;
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(98, 72);
+            this.bunifuFlatButton5.TabIndex = 18;
+            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // pBotones
             // 
@@ -257,209 +366,397 @@ namespace Intelident
             this.pBotones.Controls.Add(this.pMargenInf);
             this.pBotones.Controls.Add(this.pMargenSup);
             this.pBotones.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pBotones.Location = new System.Drawing.Point(271, 0);
+            this.pBotones.Location = new System.Drawing.Point(327, 0);
             this.pBotones.Name = "pBotones";
             this.pBotones.Size = new System.Drawing.Size(271, 807);
             this.pBotones.TabIndex = 3;
             // 
             // pMantenimiento
             // 
-            this.pMantenimiento.BackColor = System.Drawing.Color.Red;
-            this.pMantenimiento.Controls.Add(this.iconButton6);
-            this.pMantenimiento.Controls.Add(this.iconButton19);
-            this.pMantenimiento.Controls.Add(this.iconButton18);
+            this.pMantenimiento.BackColor = System.Drawing.Color.Teal;
+            this.pMantenimiento.Controls.Add(this.bunifuFlatButton16);
+            this.pMantenimiento.Controls.Add(this.bunifuFlatButton15);
+            this.pMantenimiento.Controls.Add(this.bunifuFlatButton11);
             this.pMantenimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pMantenimiento.Location = new System.Drawing.Point(0, 75);
             this.pMantenimiento.Name = "pMantenimiento";
             this.pMantenimiento.Size = new System.Drawing.Size(271, 595);
             this.pMantenimiento.TabIndex = 6;
             // 
-            // iconButton6
+            // bunifuFlatButton16
             // 
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(38, 326);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(187, 65);
-            this.iconButton6.TabIndex = 13;
-            this.iconButton6.Text = "Generar Reporte Por Tecnico";
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            this.bunifuFlatButton16.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton16.BorderRadius = 0;
+            this.bunifuFlatButton16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton16.ButtonText = "Reporte Por Tecnico";
+            this.bunifuFlatButton16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton16.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton16.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton16.Iconimage = null;
+            this.bunifuFlatButton16.Iconimage_right = null;
+            this.bunifuFlatButton16.Iconimage_right_Selected = null;
+            this.bunifuFlatButton16.Iconimage_Selected = null;
+            this.bunifuFlatButton16.IconMarginLeft = 15;
+            this.bunifuFlatButton16.IconMarginRight = 0;
+            this.bunifuFlatButton16.IconRightVisible = true;
+            this.bunifuFlatButton16.IconRightZoom = 0D;
+            this.bunifuFlatButton16.IconVisible = true;
+            this.bunifuFlatButton16.IconZoom = 80D;
+            this.bunifuFlatButton16.IsTab = false;
+            this.bunifuFlatButton16.Location = new System.Drawing.Point(27, 393);
+            this.bunifuFlatButton16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton16.Name = "bunifuFlatButton16";
+            this.bunifuFlatButton16.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton16.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton16.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton16.selected = false;
+            this.bunifuFlatButton16.Size = new System.Drawing.Size(225, 71);
+            this.bunifuFlatButton16.TabIndex = 19;
+            this.bunifuFlatButton16.Text = "Reporte Por Tecnico";
+            this.bunifuFlatButton16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton16.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton16.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton16.Click += new System.EventHandler(this.bunifuFlatButton16_Click);
             // 
-            // iconButton19
+            // bunifuFlatButton15
             // 
-            this.iconButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton19.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton19.ForeColor = System.Drawing.Color.White;
-            this.iconButton19.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton19.IconColor = System.Drawing.Color.White;
-            this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton19.Location = new System.Drawing.Point(35, 222);
-            this.iconButton19.Name = "iconButton19";
-            this.iconButton19.Size = new System.Drawing.Size(187, 65);
-            this.iconButton19.TabIndex = 12;
-            this.iconButton19.Text = "Generar Reporte Detallado Mantenimiento";
-            this.iconButton19.UseVisualStyleBackColor = false;
-            this.iconButton19.Click += new System.EventHandler(this.iconButton19_Click);
+            this.bunifuFlatButton15.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton15.BorderRadius = 0;
+            this.bunifuFlatButton15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton15.ButtonText = "Reporte Detallado Mantenimiento";
+            this.bunifuFlatButton15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton15.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton15.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton15.Iconimage = null;
+            this.bunifuFlatButton15.Iconimage_right = null;
+            this.bunifuFlatButton15.Iconimage_right_Selected = null;
+            this.bunifuFlatButton15.Iconimage_Selected = null;
+            this.bunifuFlatButton15.IconMarginLeft = 15;
+            this.bunifuFlatButton15.IconMarginRight = 0;
+            this.bunifuFlatButton15.IconRightVisible = true;
+            this.bunifuFlatButton15.IconRightZoom = 0D;
+            this.bunifuFlatButton15.IconVisible = true;
+            this.bunifuFlatButton15.IconZoom = 80D;
+            this.bunifuFlatButton15.IsTab = false;
+            this.bunifuFlatButton15.Location = new System.Drawing.Point(13, 266);
+            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton15.Name = "bunifuFlatButton15";
+            this.bunifuFlatButton15.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton15.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton15.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton15.selected = false;
+            this.bunifuFlatButton15.Size = new System.Drawing.Size(251, 72);
+            this.bunifuFlatButton15.TabIndex = 18;
+            this.bunifuFlatButton15.Text = "Reporte Detallado Mantenimiento";
+            this.bunifuFlatButton15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuFlatButton15.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton15.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton15.Click += new System.EventHandler(this.bunifuFlatButton15_Click);
             // 
-            // iconButton18
+            // bunifuFlatButton11
             // 
-            this.iconButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton18.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton18.ForeColor = System.Drawing.Color.White;
-            this.iconButton18.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton18.IconColor = System.Drawing.Color.White;
-            this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton18.Location = new System.Drawing.Point(35, 137);
-            this.iconButton18.Name = "iconButton18";
-            this.iconButton18.Size = new System.Drawing.Size(187, 65);
-            this.iconButton18.TabIndex = 11;
-            this.iconButton18.Text = "Generar Reporte De Mantenimiento";
-            this.iconButton18.UseVisualStyleBackColor = false;
-            this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
+            this.bunifuFlatButton11.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton11.BorderRadius = 0;
+            this.bunifuFlatButton11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton11.ButtonText = "Reporte de Mantenimiento";
+            this.bunifuFlatButton11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton11.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton11.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton11.Iconimage = null;
+            this.bunifuFlatButton11.Iconimage_right = null;
+            this.bunifuFlatButton11.Iconimage_right_Selected = null;
+            this.bunifuFlatButton11.Iconimage_Selected = null;
+            this.bunifuFlatButton11.IconMarginLeft = 15;
+            this.bunifuFlatButton11.IconMarginRight = 0;
+            this.bunifuFlatButton11.IconRightVisible = true;
+            this.bunifuFlatButton11.IconRightZoom = 0D;
+            this.bunifuFlatButton11.IconVisible = true;
+            this.bunifuFlatButton11.IconZoom = 80D;
+            this.bunifuFlatButton11.IsTab = false;
+            this.bunifuFlatButton11.Location = new System.Drawing.Point(27, 156);
+            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton11.Name = "bunifuFlatButton11";
+            this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton11.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton11.selected = false;
+            this.bunifuFlatButton11.Size = new System.Drawing.Size(225, 71);
+            this.bunifuFlatButton11.TabIndex = 17;
+            this.bunifuFlatButton11.Text = "Reporte de Mantenimiento";
+            this.bunifuFlatButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton11.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton11.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton11.Click += new System.EventHandler(this.bunifuFlatButton11_Click);
             // 
             // pRpPxM
             // 
-            this.pRpPxM.BackColor = System.Drawing.Color.Red;
-            this.pRpPxM.Controls.Add(this.iconButton20);
-            this.pRpPxM.Controls.Add(this.iconButton17);
+            this.pRpPxM.BackColor = System.Drawing.Color.Teal;
+            this.pRpPxM.Controls.Add(this.bunifuFlatButton14);
+            this.pRpPxM.Controls.Add(this.bunifuFlatButton10);
             this.pRpPxM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pRpPxM.Location = new System.Drawing.Point(0, 75);
             this.pRpPxM.Name = "pRpPxM";
             this.pRpPxM.Size = new System.Drawing.Size(271, 595);
             this.pRpPxM.TabIndex = 5;
             // 
-            // iconButton20
+            // bunifuFlatButton14
             // 
-            this.iconButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton20.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton20.ForeColor = System.Drawing.Color.White;
-            this.iconButton20.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton20.IconColor = System.Drawing.Color.White;
-            this.iconButton20.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton20.Location = new System.Drawing.Point(38, 255);
-            this.iconButton20.Name = "iconButton20";
-            this.iconButton20.Size = new System.Drawing.Size(187, 65);
-            this.iconButton20.TabIndex = 13;
-            this.iconButton20.Text = "Generar Reporte General de Maquina";
-            this.iconButton20.UseVisualStyleBackColor = false;
-            this.iconButton20.Click += new System.EventHandler(this.iconButton20_Click);
+            this.bunifuFlatButton14.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton14.BorderRadius = 0;
+            this.bunifuFlatButton14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton14.ButtonText = "Reporte General de Maquina";
+            this.bunifuFlatButton14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton14.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton14.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton14.Iconimage = null;
+            this.bunifuFlatButton14.Iconimage_right = null;
+            this.bunifuFlatButton14.Iconimage_right_Selected = null;
+            this.bunifuFlatButton14.Iconimage_Selected = null;
+            this.bunifuFlatButton14.IconMarginLeft = 15;
+            this.bunifuFlatButton14.IconMarginRight = 0;
+            this.bunifuFlatButton14.IconRightVisible = true;
+            this.bunifuFlatButton14.IconRightZoom = 0D;
+            this.bunifuFlatButton14.IconVisible = true;
+            this.bunifuFlatButton14.IconZoom = 80D;
+            this.bunifuFlatButton14.IsTab = false;
+            this.bunifuFlatButton14.Location = new System.Drawing.Point(8, 314);
+            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton14.Name = "bunifuFlatButton14";
+            this.bunifuFlatButton14.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton14.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton14.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton14.selected = false;
+            this.bunifuFlatButton14.Size = new System.Drawing.Size(244, 71);
+            this.bunifuFlatButton14.TabIndex = 18;
+            this.bunifuFlatButton14.Text = "Reporte General de Maquina";
+            this.bunifuFlatButton14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton14.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton14.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton14.Click += new System.EventHandler(this.bunifuFlatButton14_Click);
             // 
-            // iconButton17
+            // bunifuFlatButton10
             // 
-            this.iconButton17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton17.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton17.ForeColor = System.Drawing.Color.White;
-            this.iconButton17.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton17.IconColor = System.Drawing.Color.White;
-            this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton17.Location = new System.Drawing.Point(38, 145);
-            this.iconButton17.Name = "iconButton17";
-            this.iconButton17.Size = new System.Drawing.Size(187, 65);
-            this.iconButton17.TabIndex = 10;
-            this.iconButton17.Text = "Generar Reporte Pieza x Maquina";
-            this.iconButton17.UseVisualStyleBackColor = false;
-            this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
+            this.bunifuFlatButton10.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton10.BorderRadius = 0;
+            this.bunifuFlatButton10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton10.ButtonText = "Reporte Pieza x Maquina";
+            this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton10.Iconimage = null;
+            this.bunifuFlatButton10.Iconimage_right = null;
+            this.bunifuFlatButton10.Iconimage_right_Selected = null;
+            this.bunifuFlatButton10.Iconimage_Selected = null;
+            this.bunifuFlatButton10.IconMarginLeft = 15;
+            this.bunifuFlatButton10.IconMarginRight = 0;
+            this.bunifuFlatButton10.IconRightVisible = true;
+            this.bunifuFlatButton10.IconRightZoom = 0D;
+            this.bunifuFlatButton10.IconVisible = true;
+            this.bunifuFlatButton10.IconZoom = 80D;
+            this.bunifuFlatButton10.IsTab = false;
+            this.bunifuFlatButton10.Location = new System.Drawing.Point(8, 169);
+            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton10.Name = "bunifuFlatButton10";
+            this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton10.selected = false;
+            this.bunifuFlatButton10.Size = new System.Drawing.Size(244, 71);
+            this.bunifuFlatButton10.TabIndex = 17;
+            this.bunifuFlatButton10.Text = "Reporte Pieza x Maquina";
+            this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton10.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton10.Click += new System.EventHandler(this.bunifuFlatButton10_Click);
             // 
             // pRPaverias
             // 
-            this.pRPaverias.BackColor = System.Drawing.Color.Red;
-            this.pRPaverias.Controls.Add(this.iconButton16);
-            this.pRPaverias.Controls.Add(this.iconButton15);
-            this.pRPaverias.Controls.Add(this.iconButton14);
+            this.pRPaverias.BackColor = System.Drawing.Color.Teal;
+            this.pRPaverias.Controls.Add(this.bunifuFlatButton13);
+            this.pRPaverias.Controls.Add(this.bunifuFlatButton12);
+            this.pRPaverias.Controls.Add(this.bunifuFlatButton9);
             this.pRPaverias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pRPaverias.Location = new System.Drawing.Point(0, 75);
             this.pRPaverias.Name = "pRPaverias";
             this.pRPaverias.Size = new System.Drawing.Size(271, 595);
             this.pRPaverias.TabIndex = 4;
             // 
-            // iconButton16
+            // bunifuFlatButton13
             // 
-            this.iconButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton16.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton16.ForeColor = System.Drawing.Color.White;
-            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton16.IconColor = System.Drawing.Color.White;
-            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton16.Location = new System.Drawing.Point(38, 299);
-            this.iconButton16.Name = "iconButton16";
-            this.iconButton16.Size = new System.Drawing.Size(187, 65);
-            this.iconButton16.TabIndex = 9;
-            this.iconButton16.Text = "Generar Reporte Comun";
-            this.iconButton16.UseVisualStyleBackColor = false;
-            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
+            this.bunifuFlatButton13.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton13.BorderRadius = 0;
+            this.bunifuFlatButton13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton13.ButtonText = "Reporte de Maquina Comun";
+            this.bunifuFlatButton13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton13.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton13.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton13.Iconimage = null;
+            this.bunifuFlatButton13.Iconimage_right = null;
+            this.bunifuFlatButton13.Iconimage_right_Selected = null;
+            this.bunifuFlatButton13.Iconimage_Selected = null;
+            this.bunifuFlatButton13.IconMarginLeft = 15;
+            this.bunifuFlatButton13.IconMarginRight = 0;
+            this.bunifuFlatButton13.IconRightVisible = true;
+            this.bunifuFlatButton13.IconRightZoom = 0D;
+            this.bunifuFlatButton13.IconVisible = true;
+            this.bunifuFlatButton13.IconZoom = 80D;
+            this.bunifuFlatButton13.IsTab = false;
+            this.bunifuFlatButton13.Location = new System.Drawing.Point(37, 371);
+            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton13.Name = "bunifuFlatButton13";
+            this.bunifuFlatButton13.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton13.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton13.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton13.selected = false;
+            this.bunifuFlatButton13.Size = new System.Drawing.Size(208, 71);
+            this.bunifuFlatButton13.TabIndex = 19;
+            this.bunifuFlatButton13.Text = "Reporte de Maquina Comun";
+            this.bunifuFlatButton13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton13.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton13.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton13.Click += new System.EventHandler(this.bunifuFlatButton13_Click);
             // 
-            // iconButton15
+            // bunifuFlatButton12
             // 
-            this.iconButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton15.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton15.ForeColor = System.Drawing.Color.White;
-            this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton15.IconColor = System.Drawing.Color.White;
-            this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton15.Location = new System.Drawing.Point(38, 207);
-            this.iconButton15.Name = "iconButton15";
-            this.iconButton15.Size = new System.Drawing.Size(187, 65);
-            this.iconButton15.TabIndex = 8;
-            this.iconButton15.Text = "Generar Reporte detallado";
-            this.iconButton15.UseVisualStyleBackColor = false;
-            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
+            this.bunifuFlatButton12.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton12.BorderRadius = 0;
+            this.bunifuFlatButton12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton12.ButtonText = "Reporte de Maquina Detallado";
+            this.bunifuFlatButton12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton12.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton12.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton12.Iconimage = null;
+            this.bunifuFlatButton12.Iconimage_right = null;
+            this.bunifuFlatButton12.Iconimage_right_Selected = null;
+            this.bunifuFlatButton12.Iconimage_Selected = null;
+            this.bunifuFlatButton12.IconMarginLeft = 15;
+            this.bunifuFlatButton12.IconMarginRight = 0;
+            this.bunifuFlatButton12.IconRightVisible = true;
+            this.bunifuFlatButton12.IconRightZoom = 0D;
+            this.bunifuFlatButton12.IconVisible = true;
+            this.bunifuFlatButton12.IconZoom = 80D;
+            this.bunifuFlatButton12.IsTab = false;
+            this.bunifuFlatButton12.Location = new System.Drawing.Point(20, 266);
+            this.bunifuFlatButton12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton12.Name = "bunifuFlatButton12";
+            this.bunifuFlatButton12.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton12.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton12.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton12.selected = false;
+            this.bunifuFlatButton12.Size = new System.Drawing.Size(244, 71);
+            this.bunifuFlatButton12.TabIndex = 18;
+            this.bunifuFlatButton12.Text = "Reporte de Maquina Detallado";
+            this.bunifuFlatButton12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton12.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton12.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton12.Click += new System.EventHandler(this.bunifuFlatButton12_Click);
             // 
-            // iconButton14
+            // bunifuFlatButton9
             // 
-            this.iconButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton14.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton14.ForeColor = System.Drawing.Color.White;
-            this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton14.IconColor = System.Drawing.Color.White;
-            this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton14.Location = new System.Drawing.Point(38, 143);
-            this.iconButton14.Name = "iconButton14";
-            this.iconButton14.Size = new System.Drawing.Size(187, 44);
-            this.iconButton14.TabIndex = 7;
-            this.iconButton14.Text = "Generar Reporte";
-            this.iconButton14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton14.UseVisualStyleBackColor = false;
-            this.iconButton14.Click += new System.EventHandler(this.iconButton14_Click);
+            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton9.BorderRadius = 0;
+            this.bunifuFlatButton9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton9.ButtonText = "Reporte de Maquina";
+            this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton9.Iconimage = null;
+            this.bunifuFlatButton9.Iconimage_right = null;
+            this.bunifuFlatButton9.Iconimage_right_Selected = null;
+            this.bunifuFlatButton9.Iconimage_Selected = null;
+            this.bunifuFlatButton9.IconMarginLeft = 15;
+            this.bunifuFlatButton9.IconMarginRight = 0;
+            this.bunifuFlatButton9.IconRightVisible = true;
+            this.bunifuFlatButton9.IconRightZoom = 0D;
+            this.bunifuFlatButton9.IconVisible = true;
+            this.bunifuFlatButton9.IconZoom = 80D;
+            this.bunifuFlatButton9.IsTab = false;
+            this.bunifuFlatButton9.Location = new System.Drawing.Point(55, 169);
+            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton9.Name = "bunifuFlatButton9";
+            this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton9.selected = false;
+            this.bunifuFlatButton9.Size = new System.Drawing.Size(158, 71);
+            this.bunifuFlatButton9.TabIndex = 17;
+            this.bunifuFlatButton9.Text = "Reporte de Maquina";
+            this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton9.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton9.Click += new System.EventHandler(this.bunifuFlatButton9_Click);
             // 
             // pRpInv
             // 
-            this.pRpInv.BackColor = System.Drawing.Color.Red;
+            this.pRpInv.BackColor = System.Drawing.Color.Teal;
+            this.pRpInv.Controls.Add(this.bunifuFlatButton8);
             this.pRpInv.Controls.Add(this.label3);
             this.pRpInv.Controls.Add(this.textBox1);
-            this.pRpInv.Controls.Add(this.iconButton13);
             this.pRpInv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pRpInv.Location = new System.Drawing.Point(0, 75);
             this.pRpInv.Name = "pRpInv";
             this.pRpInv.Size = new System.Drawing.Size(271, 595);
             this.pRpInv.TabIndex = 3;
             // 
+            // bunifuFlatButton8
+            // 
+            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton8.BorderRadius = 0;
+            this.bunifuFlatButton8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton8.ButtonText = "Reporte de Inventario";
+            this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton8.Iconimage = null;
+            this.bunifuFlatButton8.Iconimage_right = null;
+            this.bunifuFlatButton8.Iconimage_right_Selected = null;
+            this.bunifuFlatButton8.Iconimage_Selected = null;
+            this.bunifuFlatButton8.IconMarginLeft = 15;
+            this.bunifuFlatButton8.IconMarginRight = 0;
+            this.bunifuFlatButton8.IconRightVisible = true;
+            this.bunifuFlatButton8.IconRightZoom = 0D;
+            this.bunifuFlatButton8.IconVisible = true;
+            this.bunifuFlatButton8.IconZoom = 80D;
+            this.bunifuFlatButton8.IsTab = false;
+            this.bunifuFlatButton8.Location = new System.Drawing.Point(38, 235);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton8.Name = "bunifuFlatButton8";
+            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton8.selected = false;
+            this.bunifuFlatButton8.Size = new System.Drawing.Size(158, 71);
+            this.bunifuFlatButton8.TabIndex = 17;
+            this.bunifuFlatButton8.Text = "Reporte de Inventario";
+            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton8.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton8.Click += new System.EventHandler(this.bunifuFlatButton8_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(34, 85);
+            this.label3.Location = new System.Drawing.Point(38, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(158, 20);
             this.label3.TabIndex = 8;
@@ -467,61 +764,61 @@ namespace Intelident
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 180);
+            this.textBox1.Location = new System.Drawing.Point(20, 181);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
+            this.textBox1.Size = new System.Drawing.Size(205, 22);
             this.textBox1.TabIndex = 7;
-            // 
-            // iconButton13
-            // 
-            this.iconButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton13.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton13.ForeColor = System.Drawing.Color.White;
-            this.iconButton13.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton13.IconColor = System.Drawing.Color.White;
-            this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton13.Location = new System.Drawing.Point(23, 232);
-            this.iconButton13.Name = "iconButton13";
-            this.iconButton13.Size = new System.Drawing.Size(187, 44);
-            this.iconButton13.TabIndex = 6;
-            this.iconButton13.Text = "Buscar Por Nombre";
-            this.iconButton13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton13.UseVisualStyleBackColor = false;
-            this.iconButton13.Click += new System.EventHandler(this.iconButton13_Click);
             // 
             // pRpVentas
             // 
-            this.pRpVentas.BackColor = System.Drawing.Color.Red;
-            this.pRpVentas.Controls.Add(this.iconButton12);
+            this.pRpVentas.BackColor = System.Drawing.Color.Teal;
+            this.pRpVentas.Controls.Add(this.bunifuFlatButton7);
             this.pRpVentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pRpVentas.Location = new System.Drawing.Point(0, 75);
             this.pRpVentas.Name = "pRpVentas";
             this.pRpVentas.Size = new System.Drawing.Size(271, 595);
             this.pRpVentas.TabIndex = 2;
             // 
-            // iconButton12
+            // bunifuFlatButton7
             // 
-            this.iconButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton12.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton12.ForeColor = System.Drawing.Color.White;
-            this.iconButton12.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton12.IconColor = System.Drawing.Color.White;
-            this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton12.Location = new System.Drawing.Point(55, 134);
-            this.iconButton12.Name = "iconButton12";
-            this.iconButton12.Size = new System.Drawing.Size(155, 76);
-            this.iconButton12.TabIndex = 5;
-            this.iconButton12.Text = "Generar Rp Ventas";
-            this.iconButton12.UseVisualStyleBackColor = false;
-            this.iconButton12.Click += new System.EventHandler(this.iconButton12_Click);
+            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton7.BorderRadius = 0;
+            this.bunifuFlatButton7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton7.ButtonText = "Reporte de Averias";
+            this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton7.Iconimage = null;
+            this.bunifuFlatButton7.Iconimage_right = null;
+            this.bunifuFlatButton7.Iconimage_right_Selected = null;
+            this.bunifuFlatButton7.Iconimage_Selected = null;
+            this.bunifuFlatButton7.IconMarginLeft = 15;
+            this.bunifuFlatButton7.IconMarginRight = 0;
+            this.bunifuFlatButton7.IconRightVisible = true;
+            this.bunifuFlatButton7.IconRightZoom = 0D;
+            this.bunifuFlatButton7.IconVisible = true;
+            this.bunifuFlatButton7.IconZoom = 80D;
+            this.bunifuFlatButton7.IsTab = false;
+            this.bunifuFlatButton7.Location = new System.Drawing.Point(52, 210);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton7.Name = "bunifuFlatButton7";
+            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton7.selected = false;
+            this.bunifuFlatButton7.Size = new System.Drawing.Size(158, 71);
+            this.bunifuFlatButton7.TabIndex = 16;
+            this.bunifuFlatButton7.Text = "Reporte de Averias";
+            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton7.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton7.Click += new System.EventHandler(this.bunifuFlatButton7_Click);
             // 
             // pMargenInf
             // 
-            this.pMargenInf.BackColor = System.Drawing.Color.Red;
+            this.pMargenInf.BackColor = System.Drawing.Color.Teal;
             this.pMargenInf.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pMargenInf.Location = new System.Drawing.Point(0, 670);
             this.pMargenInf.Name = "pMargenInf";
@@ -530,49 +827,50 @@ namespace Intelident
             // 
             // pMargenSup
             // 
-            this.pMargenSup.BackColor = System.Drawing.Color.Red;
-            this.pMargenSup.Controls.Add(this.iconButton11);
+            this.pMargenSup.BackColor = System.Drawing.Color.Teal;
+            this.pMargenSup.Controls.Add(this.bunifuFlatButton6);
             this.pMargenSup.Dock = System.Windows.Forms.DockStyle.Top;
             this.pMargenSup.Location = new System.Drawing.Point(0, 0);
             this.pMargenSup.Name = "pMargenSup";
             this.pMargenSup.Size = new System.Drawing.Size(271, 75);
             this.pMargenSup.TabIndex = 0;
             // 
-            // iconButton11
+            // bunifuFlatButton6
             // 
-            this.iconButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton11.ForeColor = System.Drawing.Color.White;
-            this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.iconButton11.IconColor = System.Drawing.Color.White;
-            this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton11.IconSize = 70;
-            this.iconButton11.Location = new System.Drawing.Point(0, 0);
-            this.iconButton11.Name = "iconButton11";
-            this.iconButton11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.iconButton11.Size = new System.Drawing.Size(73, 75);
-            this.iconButton11.TabIndex = 0;
-            this.iconButton11.UseVisualStyleBackColor = false;
-            this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.DocumentMapWidth = 394;
-            this.reportViewer1.IsDocumentMapWidthFixed = true;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Intelident.Reportes.averias.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(542, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
-            this.reportViewer1.MinimumSize = new System.Drawing.Size(500, 500);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
-            this.reportViewer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(840, 807);
-            this.reportViewer1.TabIndex = 4;
-            this.reportViewer1.TabStop = false;
-            this.reportViewer1.ZoomPercent = 75;
+            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton6.BorderRadius = 0;
+            this.bunifuFlatButton6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bunifuFlatButton6.ButtonText = "";
+            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
+            this.bunifuFlatButton6.Iconimage_right = null;
+            this.bunifuFlatButton6.Iconimage_right_Selected = null;
+            this.bunifuFlatButton6.Iconimage_Selected = null;
+            this.bunifuFlatButton6.IconMarginLeft = 11;
+            this.bunifuFlatButton6.IconMarginRight = 0;
+            this.bunifuFlatButton6.IconRightVisible = true;
+            this.bunifuFlatButton6.IconRightZoom = 0D;
+            this.bunifuFlatButton6.IconVisible = true;
+            this.bunifuFlatButton6.IconZoom = 100D;
+            this.bunifuFlatButton6.IsTab = false;
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
+            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton6.selected = false;
+            this.bunifuFlatButton6.Size = new System.Drawing.Size(98, 75);
+            this.bunifuFlatButton6.TabIndex = 19;
+            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton6.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
             // 
             // bindingSourceinv
             // 
@@ -669,6 +967,25 @@ namespace Intelident
             // 
             this.spMantenimientoTableAdapter.ClearBeforeFill = true;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.DocumentMapWidth = 392;
+            this.reportViewer1.IsDocumentMapWidthFixed = true;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Intelident.Reportes.averias.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(598, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
+            this.reportViewer1.MinimumSize = new System.Drawing.Size(500, 500);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
+            this.reportViewer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(784, 807);
+            this.reportViewer1.TabIndex = 4;
+            this.reportViewer1.TabStop = false;
+            this.reportViewer1.ZoomPercent = 75;
+            // 
             // RpVentas
             // 
             this.BackColor = System.Drawing.Color.Purple;
@@ -677,6 +994,7 @@ namespace Intelident
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.pBotones);
             this.Controls.Add(this.pOpciones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RpVentas";
             this.Text = "Reportes";
@@ -709,54 +1027,54 @@ namespace Intelident
         #endregion
         private System.Windows.Forms.Panel pOpciones;
         private System.Windows.Forms.Panel pBotones;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Panel pMargenSup;
         private System.Windows.Forms.Panel pMargenInf;
         private System.Windows.Forms.Panel pRpVentas;
-        private FontAwesome.Sharp.IconButton iconButton11;
-        private FontAwesome.Sharp.IconButton iconButton12;
         private System.Windows.Forms.Panel pRpInv;
-        private FontAwesome.Sharp.IconButton iconButton13;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private Reportes.BDReportes bdReportes;
         private System.Windows.Forms.BindingSource bindingSourceAverias;
         private System.Windows.Forms.Panel pRPaverias;
-        private FontAwesome.Sharp.IconButton iconButton14;
         private System.Windows.Forms.BindingSource bindingSourceinv;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton10;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private Reportes.BDReportesTableAdapters.spMaquinaAveriaTableAdapter spMaquinaAveriaTableAdapter;
-        private FontAwesome.Sharp.IconButton iconButton15;
         private System.Windows.Forms.BindingSource bindingSourceRDetallado;
         private Reportes.BDReportesTableAdapters.spAveriaDetalladaTableAdapter spAveriaDetalladaTableAdapter;
         private System.Windows.Forms.BindingSource bindingSourceAComunes;
         private Reportes.BDReportesTableAdapters.spAveriaMaquinaTableAdapter spAveriaMaquinaTableAdapter;
-        private FontAwesome.Sharp.IconButton iconButton16;
         private System.Windows.Forms.Panel pRpPxM;
-        private FontAwesome.Sharp.IconButton iconButton17;
         private System.Windows.Forms.BindingSource bindingSourcePxM;
         private Reportes.BDReportesTableAdapters.spInventarioPiezaMaquinaTableAdapter spInventarioPiezaMaquinaTableAdapter;
         private Reportes.BDReportesTableAdapters.spRpInventarioTableAdapter spRpInventarioTableAdapter;
         private System.Windows.Forms.Panel pMantenimiento;
-        private FontAwesome.Sharp.IconButton iconButton18;
         private System.Windows.Forms.BindingSource bindingSourceMantenimiento;
         private Reportes.BDReportesTableAdapters.spMantenimientoSemanalDetalladoTableAdapter spMantenimientoSemanalDetalladoTableAdapter;
-        private FontAwesome.Sharp.IconButton iconButton19;
         private System.Windows.Forms.BindingSource bindingSourceDMantenimiento;
         private Reportes.BDReportesTableAdapters.spDetalladoTableAdapter spDetalladoTableAdapter;
-        private FontAwesome.Sharp.IconButton iconButton20;
         private System.Windows.Forms.BindingSource bindingSourceGMaquina;
         private Reportes.BDReportesTableAdapters.spAveriaMaquinaLugarTableAdapter spAveriaMaquinaLugarTableAdapter;
         private System.Windows.Forms.BindingSource bindingSourceVentas;
         private Reportes.BDReportesTableAdapters.spVentasTableAdapter spVentasTableAdapter;
-        private FontAwesome.Sharp.IconButton iconButton6;
         private System.Windows.Forms.BindingSource bindingSourceTecnico;
         private Reportes.BDReportesTableAdapters.spMantenimientoTableAdapter spMantenimientoTableAdapter;
+        private Bunifu.Framework.UI.BunifuFlatButton BtnRpVenta;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Bunifu.Framework.UI.BunifuFlatButton BtnRpInv;
+        private Bunifu.Framework.UI.BunifuFlatButton BtnRpAverias;
+        private Bunifu.Framework.UI.BunifuFlatButton BtnRpMaquina;
+        private Bunifu.Framework.UI.BunifuFlatButton BtnRpManteniminto;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton11;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton10;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton9;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton12;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton13;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton14;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton15;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton16;
     }
 }
