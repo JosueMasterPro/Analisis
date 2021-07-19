@@ -349,11 +349,12 @@ namespace Intelident
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.Blue;
             this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(98, 72);
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(83, 72);
             this.bunifuFlatButton5.TabIndex = 18;
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // pBotones
             // 

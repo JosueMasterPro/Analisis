@@ -14,7 +14,6 @@ C:\Users\frank\source\repos\Analisis\Intelident\obj\Debug\Intelident.pdb
 C:\Users\Josue Reyes\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.exe.config
 C:\Users\Josue Reyes\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.exe
 C:\Users\Josue Reyes\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\Intelident.pdb
-C:\Users\Josue Reyes\Source\Repos\JosueMasterPro\Analisis\Intelident\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Josue Reyes\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Interfaz.resources
 C:\Users\Josue Reyes\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.Properties.Resources.resources
 C:\Users\Josue Reyes\Source\Repos\JosueMasterPro\Analisis\Intelident\obj\Debug\Intelident.csproj.GenerateResource.cache

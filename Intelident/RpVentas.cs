@@ -221,6 +221,9 @@ namespace Intelident
             this.reportViewer1.RefreshReport();
         }
 
-        
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
