@@ -16,10 +16,6 @@ namespace Intelident
     public partial class Login : Form
     {
 
-
-
-        private IconButton currentBtn;
-        private Panel leftBorderBtn;
         private Form FormActual;
         public Login()
         {
@@ -138,14 +134,10 @@ namespace Intelident
             label3.Text = "";
         }
 
-        private void iconPictureBox2_Click(object sender, EventArgs e)
+        private void iconButton3_Click(object sender, EventArgs e)
         {
-            OpenForm(new Ingreso());
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            new Ingreso().Show();
         }
     }
     

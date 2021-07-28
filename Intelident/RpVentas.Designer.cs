@@ -40,10 +40,6 @@ namespace Intelident
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.pBotones = new System.Windows.Forms.Panel();
-            this.pMantenimiento = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton19 = new FontAwesome.Sharp.IconButton();
-            this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.pRpPxM = new System.Windows.Forms.Panel();
             this.iconButton20 = new FontAwesome.Sharp.IconButton();
             this.iconButton17 = new FontAwesome.Sharp.IconButton();
@@ -57,9 +53,6 @@ namespace Intelident
             this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.pRpVentas = new System.Windows.Forms.Panel();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
-            this.pMargenInf = new System.Windows.Forms.Panel();
-            this.pMargenSup = new System.Windows.Forms.Panel();
-            this.iconButton11 = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.bindingSourceinv = new System.Windows.Forms.BindingSource(this.components);
             this.bdReportes = new Intelident.Reportes.BDReportes();
@@ -82,15 +75,20 @@ namespace Intelident
             this.spVentasTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spVentasTableAdapter();
             this.bindingSourceTecnico = new System.Windows.Forms.BindingSource(this.components);
             this.spMantenimientoTableAdapter = new Intelident.Reportes.BDReportesTableAdapters.spMantenimientoTableAdapter();
+            this.iconButton11 = new FontAwesome.Sharp.IconButton();
+            this.pMargenSup = new System.Windows.Forms.Panel();
+            this.pMargenInf = new System.Windows.Forms.Panel();
+            this.iconButton18 = new FontAwesome.Sharp.IconButton();
+            this.iconButton19 = new FontAwesome.Sharp.IconButton();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.pMantenimiento = new System.Windows.Forms.Panel();
             this.pOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pBotones.SuspendLayout();
-            this.pMantenimiento.SuspendLayout();
             this.pRpPxM.SuspendLayout();
             this.pRPaverias.SuspendLayout();
             this.pRpInv.SuspendLayout();
             this.pRpVentas.SuspendLayout();
-            this.pMargenSup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceinv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdReportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAverias)).BeginInit();
@@ -102,11 +100,13 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGMaquina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTecnico)).BeginInit();
+            this.pMargenSup.SuspendLayout();
+            this.pMantenimiento.SuspendLayout();
             this.SuspendLayout();
             // 
             // pOpciones
             // 
-            this.pOpciones.BackColor = System.Drawing.Color.Red;
+            this.pOpciones.BackColor = System.Drawing.Color.DarkRed;
             this.pOpciones.Controls.Add(this.iconButton5);
             this.pOpciones.Controls.Add(this.iconButton4);
             this.pOpciones.Controls.Add(this.iconButton3);
@@ -116,7 +116,7 @@ namespace Intelident
             this.pOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pOpciones.Location = new System.Drawing.Point(0, 0);
             this.pOpciones.Name = "pOpciones";
-            this.pOpciones.Size = new System.Drawing.Size(271, 807);
+            this.pOpciones.Size = new System.Drawing.Size(271, 749);
             this.pOpciones.TabIndex = 1;
             // 
             // iconButton5
@@ -221,7 +221,7 @@ namespace Intelident
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.iconButton10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -249,94 +249,28 @@ namespace Intelident
             // pBotones
             // 
             this.pBotones.BackColor = System.Drawing.Color.Red;
+            this.pBotones.Controls.Add(this.pMargenInf);
+            this.pBotones.Controls.Add(this.pMargenSup);
             this.pBotones.Controls.Add(this.pMantenimiento);
             this.pBotones.Controls.Add(this.pRpPxM);
             this.pBotones.Controls.Add(this.pRPaverias);
             this.pBotones.Controls.Add(this.pRpInv);
             this.pBotones.Controls.Add(this.pRpVentas);
-            this.pBotones.Controls.Add(this.pMargenInf);
-            this.pBotones.Controls.Add(this.pMargenSup);
             this.pBotones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pBotones.Location = new System.Drawing.Point(271, 0);
             this.pBotones.Name = "pBotones";
-            this.pBotones.Size = new System.Drawing.Size(271, 807);
+            this.pBotones.Size = new System.Drawing.Size(271, 749);
             this.pBotones.TabIndex = 3;
-            // 
-            // pMantenimiento
-            // 
-            this.pMantenimiento.BackColor = System.Drawing.Color.Red;
-            this.pMantenimiento.Controls.Add(this.iconButton6);
-            this.pMantenimiento.Controls.Add(this.iconButton19);
-            this.pMantenimiento.Controls.Add(this.iconButton18);
-            this.pMantenimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pMantenimiento.Location = new System.Drawing.Point(0, 75);
-            this.pMantenimiento.Name = "pMantenimiento";
-            this.pMantenimiento.Size = new System.Drawing.Size(271, 595);
-            this.pMantenimiento.TabIndex = 6;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(38, 326);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(187, 65);
-            this.iconButton6.TabIndex = 13;
-            this.iconButton6.Text = "Generar Reporte Por Tecnico";
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
-            // 
-            // iconButton19
-            // 
-            this.iconButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton19.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton19.ForeColor = System.Drawing.Color.White;
-            this.iconButton19.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton19.IconColor = System.Drawing.Color.White;
-            this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton19.Location = new System.Drawing.Point(35, 222);
-            this.iconButton19.Name = "iconButton19";
-            this.iconButton19.Size = new System.Drawing.Size(187, 65);
-            this.iconButton19.TabIndex = 12;
-            this.iconButton19.Text = "Generar Reporte Detallado Mantenimiento";
-            this.iconButton19.UseVisualStyleBackColor = false;
-            this.iconButton19.Click += new System.EventHandler(this.iconButton19_Click);
-            // 
-            // iconButton18
-            // 
-            this.iconButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton18.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.iconButton18.ForeColor = System.Drawing.Color.White;
-            this.iconButton18.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton18.IconColor = System.Drawing.Color.White;
-            this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton18.Location = new System.Drawing.Point(35, 137);
-            this.iconButton18.Name = "iconButton18";
-            this.iconButton18.Size = new System.Drawing.Size(187, 65);
-            this.iconButton18.TabIndex = 11;
-            this.iconButton18.Text = "Generar Reporte De Mantenimiento";
-            this.iconButton18.UseVisualStyleBackColor = false;
-            this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
             // 
             // pRpPxM
             // 
-            this.pRpPxM.BackColor = System.Drawing.Color.Red;
+            this.pRpPxM.BackColor = System.Drawing.Color.DarkRed;
             this.pRpPxM.Controls.Add(this.iconButton20);
             this.pRpPxM.Controls.Add(this.iconButton17);
             this.pRpPxM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pRpPxM.Location = new System.Drawing.Point(0, 75);
+            this.pRpPxM.Location = new System.Drawing.Point(0, 0);
             this.pRpPxM.Name = "pRpPxM";
-            this.pRpPxM.Size = new System.Drawing.Size(271, 595);
+            this.pRpPxM.Size = new System.Drawing.Size(271, 749);
             this.pRpPxM.TabIndex = 5;
             // 
             // iconButton20
@@ -377,14 +311,14 @@ namespace Intelident
             // 
             // pRPaverias
             // 
-            this.pRPaverias.BackColor = System.Drawing.Color.Red;
+            this.pRPaverias.BackColor = System.Drawing.Color.DarkRed;
             this.pRPaverias.Controls.Add(this.iconButton16);
             this.pRPaverias.Controls.Add(this.iconButton15);
             this.pRPaverias.Controls.Add(this.iconButton14);
             this.pRPaverias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pRPaverias.Location = new System.Drawing.Point(0, 75);
+            this.pRPaverias.Location = new System.Drawing.Point(0, 0);
             this.pRPaverias.Name = "pRPaverias";
-            this.pRPaverias.Size = new System.Drawing.Size(271, 595);
+            this.pRPaverias.Size = new System.Drawing.Size(271, 749);
             this.pRPaverias.TabIndex = 4;
             // 
             // iconButton16
@@ -444,14 +378,14 @@ namespace Intelident
             // 
             // pRpInv
             // 
-            this.pRpInv.BackColor = System.Drawing.Color.Red;
+            this.pRpInv.BackColor = System.Drawing.Color.DarkRed;
             this.pRpInv.Controls.Add(this.label3);
             this.pRpInv.Controls.Add(this.textBox1);
             this.pRpInv.Controls.Add(this.iconButton13);
             this.pRpInv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pRpInv.Location = new System.Drawing.Point(0, 75);
+            this.pRpInv.Location = new System.Drawing.Point(0, 0);
             this.pRpInv.Name = "pRpInv";
-            this.pRpInv.Size = new System.Drawing.Size(271, 595);
+            this.pRpInv.Size = new System.Drawing.Size(271, 749);
             this.pRpInv.TabIndex = 3;
             // 
             // label3
@@ -461,7 +395,7 @@ namespace Intelident
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(34, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 20);
+            this.label3.Size = new System.Drawing.Size(133, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre De la pieza";
             // 
@@ -469,7 +403,7 @@ namespace Intelident
             // 
             this.textBox1.Location = new System.Drawing.Point(23, 180);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
+            this.textBox1.Size = new System.Drawing.Size(187, 20);
             this.textBox1.TabIndex = 7;
             // 
             // iconButton13
@@ -493,12 +427,12 @@ namespace Intelident
             // 
             // pRpVentas
             // 
-            this.pRpVentas.BackColor = System.Drawing.Color.Red;
+            this.pRpVentas.BackColor = System.Drawing.Color.DarkRed;
             this.pRpVentas.Controls.Add(this.iconButton12);
             this.pRpVentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pRpVentas.Location = new System.Drawing.Point(0, 75);
+            this.pRpVentas.Location = new System.Drawing.Point(0, 0);
             this.pRpVentas.Name = "pRpVentas";
-            this.pRpVentas.Size = new System.Drawing.Size(271, 595);
+            this.pRpVentas.Size = new System.Drawing.Size(271, 749);
             this.pRpVentas.TabIndex = 2;
             // 
             // iconButton12
@@ -519,42 +453,6 @@ namespace Intelident
             this.iconButton12.UseVisualStyleBackColor = false;
             this.iconButton12.Click += new System.EventHandler(this.iconButton12_Click);
             // 
-            // pMargenInf
-            // 
-            this.pMargenInf.BackColor = System.Drawing.Color.Red;
-            this.pMargenInf.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pMargenInf.Location = new System.Drawing.Point(0, 670);
-            this.pMargenInf.Name = "pMargenInf";
-            this.pMargenInf.Size = new System.Drawing.Size(271, 137);
-            this.pMargenInf.TabIndex = 1;
-            // 
-            // pMargenSup
-            // 
-            this.pMargenSup.BackColor = System.Drawing.Color.Red;
-            this.pMargenSup.Controls.Add(this.iconButton11);
-            this.pMargenSup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pMargenSup.Location = new System.Drawing.Point(0, 0);
-            this.pMargenSup.Name = "pMargenSup";
-            this.pMargenSup.Size = new System.Drawing.Size(271, 75);
-            this.pMargenSup.TabIndex = 0;
-            // 
-            // iconButton11
-            // 
-            this.iconButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton11.ForeColor = System.Drawing.Color.White;
-            this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.iconButton11.IconColor = System.Drawing.Color.White;
-            this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton11.IconSize = 70;
-            this.iconButton11.Location = new System.Drawing.Point(0, 0);
-            this.iconButton11.Name = "iconButton11";
-            this.iconButton11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.iconButton11.Size = new System.Drawing.Size(73, 75);
-            this.iconButton11.TabIndex = 0;
-            this.iconButton11.UseVisualStyleBackColor = false;
-            this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
-            // 
             // reportViewer1
             // 
             this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -569,7 +467,7 @@ namespace Intelident
             this.reportViewer1.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
             this.reportViewer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(840, 807);
+            this.reportViewer1.Size = new System.Drawing.Size(828, 749);
             this.reportViewer1.TabIndex = 4;
             this.reportViewer1.TabStop = false;
             this.reportViewer1.ZoomPercent = 75;
@@ -669,11 +567,113 @@ namespace Intelident
             // 
             this.spMantenimientoTableAdapter.ClearBeforeFill = true;
             // 
+            // iconButton11
+            // 
+            this.iconButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton11.ForeColor = System.Drawing.Color.White;
+            this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.iconButton11.IconColor = System.Drawing.Color.White;
+            this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton11.IconSize = 70;
+            this.iconButton11.Location = new System.Drawing.Point(0, 0);
+            this.iconButton11.Name = "iconButton11";
+            this.iconButton11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.iconButton11.Size = new System.Drawing.Size(73, 75);
+            this.iconButton11.TabIndex = 0;
+            this.iconButton11.UseVisualStyleBackColor = false;
+            this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
+            // 
+            // pMargenSup
+            // 
+            this.pMargenSup.BackColor = System.Drawing.Color.Maroon;
+            this.pMargenSup.Controls.Add(this.iconButton11);
+            this.pMargenSup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pMargenSup.Location = new System.Drawing.Point(0, 0);
+            this.pMargenSup.Name = "pMargenSup";
+            this.pMargenSup.Size = new System.Drawing.Size(271, 75);
+            this.pMargenSup.TabIndex = 0;
+            // 
+            // pMargenInf
+            // 
+            this.pMargenInf.BackColor = System.Drawing.Color.DarkRed;
+            this.pMargenInf.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pMargenInf.Location = new System.Drawing.Point(0, 612);
+            this.pMargenInf.Name = "pMargenInf";
+            this.pMargenInf.Size = new System.Drawing.Size(271, 137);
+            this.pMargenInf.TabIndex = 1;
+            // 
+            // iconButton18
+            // 
+            this.iconButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton18.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton18.ForeColor = System.Drawing.Color.White;
+            this.iconButton18.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton18.IconColor = System.Drawing.Color.White;
+            this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton18.Location = new System.Drawing.Point(35, 137);
+            this.iconButton18.Name = "iconButton18";
+            this.iconButton18.Size = new System.Drawing.Size(187, 65);
+            this.iconButton18.TabIndex = 11;
+            this.iconButton18.Text = "Generar Reporte De Mantenimiento";
+            this.iconButton18.UseVisualStyleBackColor = false;
+            this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
+            // 
+            // iconButton19
+            // 
+            this.iconButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton19.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton19.ForeColor = System.Drawing.Color.White;
+            this.iconButton19.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton19.IconColor = System.Drawing.Color.White;
+            this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton19.Location = new System.Drawing.Point(35, 222);
+            this.iconButton19.Name = "iconButton19";
+            this.iconButton19.Size = new System.Drawing.Size(187, 65);
+            this.iconButton19.TabIndex = 12;
+            this.iconButton19.Text = "Generar Reporte Detallado Mantenimiento";
+            this.iconButton19.UseVisualStyleBackColor = false;
+            this.iconButton19.Click += new System.EventHandler(this.iconButton19_Click);
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton6.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.iconButton6.ForeColor = System.Drawing.Color.White;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton6.IconColor = System.Drawing.Color.White;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.Location = new System.Drawing.Point(38, 326);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(187, 65);
+            this.iconButton6.TabIndex = 13;
+            this.iconButton6.Text = "Generar Reporte Por Tecnico";
+            this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
+            // pMantenimiento
+            // 
+            this.pMantenimiento.BackColor = System.Drawing.Color.DarkRed;
+            this.pMantenimiento.Controls.Add(this.iconButton6);
+            this.pMantenimiento.Controls.Add(this.iconButton19);
+            this.pMantenimiento.Controls.Add(this.iconButton18);
+            this.pMantenimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pMantenimiento.Location = new System.Drawing.Point(0, 0);
+            this.pMantenimiento.Name = "pMantenimiento";
+            this.pMantenimiento.Size = new System.Drawing.Size(271, 749);
+            this.pMantenimiento.TabIndex = 6;
+            // 
             // RpVentas
             // 
             this.BackColor = System.Drawing.Color.Purple;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1382, 807);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.pBotones);
             this.Controls.Add(this.pOpciones);
@@ -684,13 +684,11 @@ namespace Intelident
             this.pOpciones.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pBotones.ResumeLayout(false);
-            this.pMantenimiento.ResumeLayout(false);
             this.pRpPxM.ResumeLayout(false);
             this.pRPaverias.ResumeLayout(false);
             this.pRpInv.ResumeLayout(false);
             this.pRpInv.PerformLayout();
             this.pRpVentas.ResumeLayout(false);
-            this.pMargenSup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceinv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdReportes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAverias)).EndInit();
@@ -702,6 +700,8 @@ namespace Intelident
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGMaquina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTecnico)).EndInit();
+            this.pMargenSup.ResumeLayout(false);
+            this.pMantenimiento.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -714,10 +714,7 @@ namespace Intelident
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.Panel pMargenSup;
-        private System.Windows.Forms.Panel pMargenInf;
         private System.Windows.Forms.Panel pRpVentas;
-        private FontAwesome.Sharp.IconButton iconButton11;
         private FontAwesome.Sharp.IconButton iconButton12;
         private System.Windows.Forms.Panel pRpInv;
         private FontAwesome.Sharp.IconButton iconButton13;
@@ -743,11 +740,8 @@ namespace Intelident
         private System.Windows.Forms.BindingSource bindingSourcePxM;
         private Reportes.BDReportesTableAdapters.spInventarioPiezaMaquinaTableAdapter spInventarioPiezaMaquinaTableAdapter;
         private Reportes.BDReportesTableAdapters.spRpInventarioTableAdapter spRpInventarioTableAdapter;
-        private System.Windows.Forms.Panel pMantenimiento;
-        private FontAwesome.Sharp.IconButton iconButton18;
         private System.Windows.Forms.BindingSource bindingSourceMantenimiento;
         private Reportes.BDReportesTableAdapters.spMantenimientoSemanalDetalladoTableAdapter spMantenimientoSemanalDetalladoTableAdapter;
-        private FontAwesome.Sharp.IconButton iconButton19;
         private System.Windows.Forms.BindingSource bindingSourceDMantenimiento;
         private Reportes.BDReportesTableAdapters.spDetalladoTableAdapter spDetalladoTableAdapter;
         private FontAwesome.Sharp.IconButton iconButton20;
@@ -755,8 +749,14 @@ namespace Intelident
         private Reportes.BDReportesTableAdapters.spAveriaMaquinaLugarTableAdapter spAveriaMaquinaLugarTableAdapter;
         private System.Windows.Forms.BindingSource bindingSourceVentas;
         private Reportes.BDReportesTableAdapters.spVentasTableAdapter spVentasTableAdapter;
-        private FontAwesome.Sharp.IconButton iconButton6;
         private System.Windows.Forms.BindingSource bindingSourceTecnico;
         private Reportes.BDReportesTableAdapters.spMantenimientoTableAdapter spMantenimientoTableAdapter;
+        private System.Windows.Forms.Panel pMargenSup;
+        private FontAwesome.Sharp.IconButton iconButton11;
+        private System.Windows.Forms.Panel pMargenInf;
+        private System.Windows.Forms.Panel pMantenimiento;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton iconButton19;
+        private FontAwesome.Sharp.IconButton iconButton18;
     }
 }

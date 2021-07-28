@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Intelident"
   ],
-  "SelectedNode": "\\Intelident.sln",
+  "SelectedNode": "\\Intelident\\Interfaz.cs",
   "PreviewInSolutionExplorer": false
 }

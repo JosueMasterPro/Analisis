@@ -246,7 +246,7 @@ namespace Intelident
                         newImage = Image.FromStream(ms, true);
                     }
 
-                    pictureBox1.Image = newImage;
+                    //pictureBox1.Image = newImage;
                     newImage = null;
                 }
             }
